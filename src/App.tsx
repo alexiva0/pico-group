@@ -1,8 +1,8 @@
 import React from 'react';
 import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
-import Main from './pages/main/Main';
-import People from './pages/people/People';
-import Research from './pages/research/Research';
+import Main from 'pages/main/Main';
+import People from 'pages/people/People';
+import Research from 'pages/research/Research';
 
 import './App.css';
 
