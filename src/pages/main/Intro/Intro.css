@@ -1,0 +1,94 @@
+$b: .intro;
+
+$(b) {
+  box-sizing: border-box;
+  border-bottom: 1px solid var(--gray);
+  position: relative;
+
+  &__inner {
+    padding-top: 500px;
+    padding-bottom: 80px;
+    position: relative;
+    z-index: 2;
+  }
+
+  &__banner {
+    margin-bottom: 40px;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+
+    figure {
+      margin: 0;
+    }
+  }
+
+  &__image-box {
+    height: 100%;
+    position: relative;
+    top: -300px;
+    width: 100%;
+
+    &:before {
+      background: linear-gradient(180deg, rgba(25, 28, 30, 0.4) 0%, rgba(25, 28, 30, 0.4) 55%, rgba(25, 28, 30, 0.85) 63%, rgba(25, 28, 30, 0.95) 72.4%, #191C1E 100%);
+      content: '';
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 1;
+    }
+  }
+
+  &__image {
+    display: block;
+    width: 100%;
+  }
+
+  &__content {
+    padding-top: 10px;
+  }
+
+  &__title {
+    margin-bottom: 30px;
+    position: relative;
+  }
+
+  &__paragraph {
+    &:not(:last-of-type) {
+      margin-bottom: 20px;
+    }
+
+    &:last-of-type {
+      margin-bottom: 35px;
+    }
+  }
+
+  &__wrap {
+    display: flex;
+    align-items: center;
+  }
+
+  &__link {
+    &:first-child {
+      margin-right: 25px;
+    }
+
+    &:hover {
+      $(b)__icon {
+        fill: var(--blue);
+      }
+    }
+  }
+
+  &__icon {
+    fill: var(--light);
+  }
+
+  &__icon_aalto {
+    width: 35px;
+  }
+}

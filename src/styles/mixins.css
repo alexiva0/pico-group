@@ -1,0 +1,57 @@
+@define-mixin h1 {
+    font-family: MerriweatherSans, Arial, 'Helvetica CY', 'Nimbus Sans L', sans-serif;
+    text-transform: uppercase;
+
+    @media screen and (min-width: 1280px) {
+        font-size: 48px;
+        line-height: 62px;
+    }
+}
+
+@define-mixin h2 {
+    font-family: MerriweatherSans, Arial, 'Helvetica CY', 'Nimbus Sans L', sans-serif;
+    text-transform: uppercase;
+
+    /* @media screen and (max-width: 767px) {
+        font-size: 22px;
+        line-height: 28px;
+    }
+
+    @media screen and (min-width: 768px) and (max-width: 1023px) {
+        font-size: 26px;
+        line-height: 32px;
+    }
+
+    @media screen and (min-width: 1024px) and (max-width: 1279px) {
+        font-size: 28px;
+        line-height: 36px;
+    } */
+
+    @media screen and (min-width: 1280px) {
+        font-size: 34px;
+        line-height: 48px;
+    }
+}
+
+@define-mixin h3 {
+    font-family: MerriweatherSans, Arial, 'Helvetica CY', 'Nimbus Sans L', sans-serif;
+
+    @media screen and (min-width: 1280px) {
+        font-size: 26px;
+        line-height: 39px;
+    }
+}
+
+@define-mixin h4 {
+    font-family: MerriweatherSans, Arial, 'Helvetica CY', 'Nimbus Sans L', sans-serif;
+
+    @media screen and (min-width: 1280px) {
+        font-size: 22px;
+        line-height: 36px;
+    }
+}
+
+@define-mixin p {
+    font-size: 18px;
+    line-height: 26px;
+}
