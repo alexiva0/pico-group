@@ -7,7 +7,7 @@ import Gallery from 'pages/main/Gallery/Gallery';
 import './Main.css';
 
 const cn = cnCreate('main');
-const Main = () => {
+const Main: React.FC = () => {
   return (
     <div className={cn()}>
       <Intro />

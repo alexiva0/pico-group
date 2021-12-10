@@ -7,7 +7,7 @@ import Image from "./i/Pico-ryhma_69s.jpeg";
 import './Facilities.css';
 
 const cn = cnCreate('facilities');
-const Facilities = () => (
+const Facilities: React.FC = () => (
   <div className={cn()}>
     <ContentArea>
       <div className={cn('inner')}>
@@ -18,8 +18,8 @@ const Facilities = () => (
                 <h2 className={cn('title')}>
                   Facilities
                 </h2>
-                <p className={cn('paragraph')}>With our offices and labs located in <a href="/">Micronova</a>, Finland’s National Research Infrastructure for micro- and nanotechnology, we have immediate access to state-of-the-art nanofabrication and measurement facilities.</p>
-                <p className={cn('paragraph')}>Key equipment for our group in Micronova’s cleanroom include <a href="/">thin film deposition in the electron beam evaporator</a>, <a href="/">LEO Supra 40 Scanning Electron Microscope (SEM) with Electron Beam Lithography (EBL)</a>, a dedicated <a href="/">Electron Beam Writer (Raith EBPG 5200+)</a> and an atomic layer deposition tool <a href="/">TFS500 ALD</a>.</p>
+                <p className={cn('paragraph')}>With our offices and labs located in <a href="https://www.aalto.fi/en/otanano/micronova">Micronova</a>, Finland’s National Research Infrastructure for micro- and nanotechnology, we have immediate access to state-of-the-art nanofabrication and measurement facilities.</p>
+                <p className={cn('paragraph')}>Key equipment for our group in Micronova’s cleanroom include thin film deposition in the electron beam evaporator, LEO Supra 40 Scanning Electron Microscope (SEM) with Electron Beam Lithography (EBL), a dedicated <a href="https://www.raith.com/product/ebpg-plus/">Electron Beam Writer (Raith EBPG 5200+)</a> and an atomic layer deposition tool TFS500 ALD.</p>
                 <p className={cn('paragraph')}>In our fourth floor lab, we have two dedicated Delvotec 53XX wire bonders for bonding samples.</p>
               </div>
             </GridColumn>

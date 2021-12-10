@@ -6,7 +6,7 @@ import GridColumn from 'components/Grid/GridColumn';
 import './Footer.css';
 
 const cn = cnCreate('footer');
-const Footer = () => (
+const Footer: React.FC = () => (
   <div className={cn()}>
     <ContentArea>
       <div className={cn('inner')}>

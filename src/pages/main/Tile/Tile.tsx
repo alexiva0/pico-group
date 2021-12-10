@@ -2,14 +2,14 @@ import React from 'react';
 import cnCreate from 'utils/cnCreate';
 import './Tile.css';
 
-interface Props {
+interface ITileProps {
   date: string,
   title: string,
   linkHref: string,
 };
 
 const cn = cnCreate('tile');
-const Tile: React.FC<Props> = ({ date, title, linkHref }) => (
+const Tile: React.FC<ITileProps> = ({ date, title, linkHref }) => (
   <div className={cn()}>
     <a href={linkHref} className={cn('link')}>
       <p className={cn('date')}>{date}</p>

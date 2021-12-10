@@ -1,5 +1,5 @@
 .footer {
-  border-top: 1px solid var(--gray);
+  border-top: 1px solid var(--dark40);
 
   &__inner {
     padding-top: 80px;
@@ -33,7 +33,7 @@
     align-items: center;
 
     &:not(:last-child) {
-      margin-bottom: 25px;
+      margin-bottom: 20px;
     }
   }
 

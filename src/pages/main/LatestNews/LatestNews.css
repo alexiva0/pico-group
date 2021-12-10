@@ -1,7 +1,7 @@
 $b: .latest-news;
 
 $(b) {
-  border-bottom: 1px solid var(--gray);
+  border-bottom: 1px solid var(--dark40);
   padding-bottom: 80px;
   padding-top: 80px;
 

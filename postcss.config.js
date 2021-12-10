@@ -16,5 +16,6 @@ module.exports = {
         //     importFrom: 'src/styles/media.css',
         // }),
         require('postcss-calc'),
+        require("postcss-color-function"),
     ],
 };

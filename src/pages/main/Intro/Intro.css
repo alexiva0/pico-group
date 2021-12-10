@@ -2,7 +2,7 @@ $b: .intro;
 
 $(b) {
   box-sizing: border-box;
-  border-bottom: 1px solid var(--gray);
+  border-bottom: 1px solid var(--dark40);
   position: relative;
 
   &__inner {
@@ -28,7 +28,7 @@ $(b) {
   &__image-box {
     height: 100%;
     position: relative;
-    top: -300px;
+    top: -150px;
     width: 100%;
 
     &:before {

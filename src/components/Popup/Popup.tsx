@@ -3,7 +3,7 @@ import cnCreate from 'utils/cnCreate';
 import './Popup.css';
 import Modal from 'react-modal';
 
-type Props = {
+interface IPopupProps {
     isOpened: boolean;
     isCloseButton?: boolean;
     isFullScreenMode?: boolean;
@@ -11,7 +11,7 @@ type Props = {
 };
 
 const cn = cnCreate('popup');
-const Popup: React.FC<Props> = ({
+const Popup: React.FC<IPopupProps> = ({
     isOpened,
     isCloseButton = true,
     isFullScreenMode,

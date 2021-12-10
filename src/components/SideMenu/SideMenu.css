@@ -2,6 +2,9 @@ $b: .side-menu;
 
 $(b)  {
   padding-top: 10px;
+  padding-bottom: 80px;
+  position: sticky;
+  top: 135px;
 
   &__item {
     box-sizing: border-box;

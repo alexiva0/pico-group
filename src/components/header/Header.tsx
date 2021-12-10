@@ -32,7 +32,7 @@ const menu = [
 ];
 
 const cn = cnCreate('header');
-const Header = () => {
+const Header: React.FC = () => {
   return (
     <div className={cn()}>
       <ContentArea>
@@ -43,6 +43,7 @@ const Header = () => {
               </div>
               <p className={cn('logo-text')}>PICO</p>
           </a>
+          <div className={cn('button')}>Button</div>
           <div className={cn('list')}>
             {menu.map(({ title, url }, index) => (
               <a

@@ -3,7 +3,7 @@ $b: .header;
 $(b) {
   background-color: var(--dark80);
   /* border-bottom: 1px solid var(--light); */
-  box-shadow: 0 0 15px 0 rgb(0 0 0 / 25%);
+  box-shadow: 0 0 15px 0 rgb(0 0 0 / 45%);
   box-sizing: border-box;
   height: 85px;
   /* padding-top: 20px;

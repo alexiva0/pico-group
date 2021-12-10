@@ -4,33 +4,11 @@ import Grid from 'components/Grid/Grid';
 import GridColumn from 'components/Grid/GridColumn';
 import ContentArea from 'components/ContentArea/ContentArea';
 import Tile from 'pages/main/Tile/Tile';
+import { news } from 'content/news';
 import './LatestNews.css';
 
-const data = [
-  {
-    date: '21.08.2020',
-    title: 'Quantum Technology Finland awards Bayan Karimi',
-    linkHref: '',
-  },
-  {
-    date: '21.08.2020',
-    title: 'Simon Memorial Prize 2020 to Prof. Jukka Pekola',
-    linkHref: '',
-  },
-  {
-    date: '20.03.2017',
-    title: 'Aalto School of Science Best Doctoral Thesis 2016 Award',
-    linkHref: '',
-  },
-  {
-    date: '19.12.2016',
-    title: 'Best Physics Doctoral Dissertation 2016 Award',
-    linkHref: '',
-  },
-];
-
 const cn = cnCreate('latest-news');
-const LatestNews = () => (
+const LatestNews: React.FC = () => (
   <div className={cn()}>
     <ContentArea>
       <div className={cn('inner')}>
@@ -44,15 +22,20 @@ const LatestNews = () => (
           </svg>
         </a>
         <Grid>
-          {data.map(({ date, title, linkHref }, index) => (
-            <GridColumn all="3" key={title + index}>
-              <Tile
-                date={date}
-                title={title}
-                linkHref={linkHref}
-              />
-            </GridColumn>
-          ))}
+          {news.map(({ date, title, linkHref }, index) => {
+            if (index < 4) {
+              return (
+                <GridColumn all="3" key={title + index}>
+                  <Tile
+                    date={date}
+                    title={title}
+                    linkHref={linkHref}
+                  />
+                </GridColumn>
+              );
+            }
+            return <></>;
+          })}
         </Grid>
       </div>
     </ContentArea>
