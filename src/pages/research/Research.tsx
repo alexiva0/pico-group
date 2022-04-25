@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+import React from 'react';
+import { Switch, Route, Redirect, useRouteMatch } from 'react-router-dom';
 import cnCreate from 'utils/cnCreate';
 import SideMenu from 'components/SideMenu/SideMenu';
 import Grid from 'components/Grid/Grid';
@@ -10,35 +11,34 @@ import './Research.css';
 
 const cn = cnCreate('research');
 const Research: React.FC = () => {
-  const [activeItemId, setActiveItemId] = useState(0);
-
-  const handleItemClick = (index: number) => {
-    setActiveItemId(index);
-  };
+  const { path } = useRouteMatch();
 
   return (
     <div className={cn()}>
       <ContentArea>
         <Grid>
           <GridColumn leftOffsetAll="3">
-            <div className={cn('head')}>
-              <h1 className={cn('title')}>Research</h1>
-              <h3 className={cn('subtitle')}>{researches[activeItemId].title}</h3>
-            </div>
+            <h1 className={cn('title')}>Research</h1>
           </GridColumn>
         </Grid>
         <Grid>
           <GridColumn all="3">
             <SideMenu
               items={researches}
-              activeItem={activeItemId}
-              onItemClick={handleItemClick}
             />
           </GridColumn>
           <GridColumn all="9">
-            <div className={cn('inner')}>
-              <Article />
-            </div>
+            <Switch>
+              <div className={cn('inner')}>
+                <Route path={`${path}`} exact>
+                    <Redirect to={`${path}/maxwell’s-demon-and-stochastic-thermodynamics`} />
+                  </Route>
+                <Route path={`${path}/maxwell’s-demon-and-stochastic-thermodynamics`}>
+                  <h3 className={cn('subtitle')}>{researches[0].title}</h3>
+                  <Article />
+                </Route>
+              </div>
+            </Switch>
           </GridColumn>
         </Grid>
       </ContentArea>

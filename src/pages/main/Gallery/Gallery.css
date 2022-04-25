@@ -5,12 +5,16 @@ $b: .gallery;
     bottom: auto;
     top: 98px;
     left: 10px;
+    right: auto;
+    padding: 10px;
   }
 
   .image-gallery-fullscreen-button {
     bottom: auto;
     top: 30px;
     left: 10px;
+    right: auto;
+    padding: 10px;
   }
 
   .image-gallery-slide {
@@ -25,6 +29,11 @@ $b: .gallery;
     padding: 15px 30px;
     text-align: left;
     width: 100%;
+  }
+
+  .image-gallery-thumbnail .image-gallery-thumbnail-image {
+    max-width: 100%;
+    max-height: 60px;
   }
 }
 

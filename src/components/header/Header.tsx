@@ -1,4 +1,5 @@
 import React from 'react';
+import { NavLink } from 'react-router-dom';
 import cnCreate from 'utils/cnCreate';
 import Logo from './i/penguin-smooth.png';
 import ContentArea from 'components/ContentArea/ContentArea';
@@ -7,27 +8,27 @@ import './Header.css';
 const menu = [
   {
     title: 'Research',
-    url: './research',
+    url: '/research',
   },
   {
     title: 'People',
-    url: './people',
+    url: '/people',
   },
   {
     title: 'Collaboration',
-    url: './collaboration',
+    url: '/collaboration',
   },
   {
     title: 'Press',
-    url: './press',
+    url: '/press',
   },
   {
     title: 'Publications',
-    url: './publication',
+    url: '/publication',
   },
   {
     title: 'News',
-    url: './news',
+    url: '/news',
   },
 ];
 
@@ -37,24 +38,24 @@ const Header: React.FC = () => {
     <div className={cn()}>
       <ContentArea>
         <div className={cn('inner')}>
-          <a href="/" className={cn('logo')}>
+          <NavLink to="/" className={cn('logo')}>
               <div className={cn('logo-image-wrap')}>
                 <img src={Logo} className={cn('logo-image')} alt="PICO" />
               </div>
               <p className={cn('logo-text')}>PICO</p>
-          </a>
-          <div className={cn('button')}>Button</div>
+          </NavLink >
           <div className={cn('list')}>
             {menu.map(({ title, url }, index) => (
-              <a
-                className={cn('link', { active: index === 0 })}
+              <NavLink
+                className={cn('link')}
+                activeClassName={cn('link', { active: true })}
                 key={title + index}
-                href={url}
+                to={url}
               >
                 <div className={cn('item')}>
                   {title}
                 </div>
-              </a>
+              </NavLink>
             ))}
           </div>
         </div>
