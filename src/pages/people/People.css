@@ -1,15 +1,75 @@
 .people {
-    padding-top: 50px;
+    @media (--mobileB) {
+        padding-top: 20px;
+    }
+
+    @media (--desktop) {
+        padding-top: 50px;
+    }
 
     &__inner {
-        padding-bottom: 100px;
+        @media (--mobile) {
+            padding-bottom: 60px;
+        }
+
+        @media (--desktop) {
+            padding-bottom: 80px;
+        }
     }
 
     &__title {
-        margin-bottom: 15px;
+        margin-bottom: 10px;
     }
 
     &__subtitle {
-        margin-bottom: 40px;
+        margin-bottom: 30px;
+    }
+
+    &__former-group-name:not(:last-child),
+    &__recent-visitor-name:not(:last-child) {
+        margin-bottom: 30px;
+    }
+
+    &__general-address {
+        border-bottom: 1px solid var(--dark60);
+        display: flex;
+        margin-bottom: 25px;
+        padding-bottom: 25px;
+
+        @media (--desktop) {
+            justify-content: flex-end;
+        }
+    }
+
+    &__container {
+        display: flex;
+
+        @media (--mobileSM) {
+            flex-wrap: wrap;
+        }
+
+        @media (--desktop) {
+            width: 400px;
+        }
+
+        @media (--desktopS) {
+            width: 350px;
+        }
+
+        &:not(:last-child) {
+            margin-bottom: 15px;
+        }
+    }
+
+    &__text {
+        @mixin p;
+        display: block;
+        font-weight: 700;
+        margin-right: 10px;
+
+        @media (--mobileBU) {
+            min-width: 100px;
+            max-width: 100px;
+        }
     }
 }

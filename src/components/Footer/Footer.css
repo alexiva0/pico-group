@@ -2,14 +2,29 @@
   border-top: 1px solid var(--dark40);
 
   &__inner {
-    padding-top: 80px;
-    padding-bottom: 80px;
+    @media (--mobileSM) {
+      padding-top: 40px;
+      padding-bottom: 60px;
+    }
+
+    @media (--mobileB) {
+      padding-top: 60px;
+      padding-bottom: 80px;
+    }
+
+    @media (--desktop) {
+      padding-top: 80px;
+      padding-bottom: 100px;
+    }
   }
 
   &__logo {
     display: block;
-    margin-bottom: 40px;
     text-decoration: none;
+
+    @media (--mobileBU) {
+      margin-bottom: 40px;
+    }
   }
 
   &__logo-text {
@@ -26,6 +41,10 @@
 
   &__copyright {
     opacity: 60%;
+
+    @media (--mobileSM) {
+      margin-top: 30px;
+    }
   }
 
   &__info {

@@ -1,0 +1,14 @@
+.chips-panel {
+    &__panel {
+        margin-bottom: 40px;
+    }
+
+    &__wrap {
+        margin-bottom: -15px;
+        margin-right: -15px;
+    }
+
+    &__chip {
+        margin-bottom: 15px;
+    }
+}

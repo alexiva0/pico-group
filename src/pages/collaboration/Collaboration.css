@@ -1,0 +1,47 @@
+.collaboration {
+    @media (--mobileB) {
+        padding-top: 20px;
+    }
+
+    @media (--desktop) {
+        padding-top: 50px;
+    }
+
+    &__inner {
+        @media (--mobileB) {
+            padding-bottom: 60px;
+        }
+
+        @media (--desktop) {
+            padding-bottom: 80px;
+        }
+    }
+
+    &__title {
+        margin-bottom: 30px;
+    }
+
+    &__text {
+        margin-bottom: 20px;
+        max-width: 750px;
+    }
+
+    &__item {
+        &:not(:last-child) {
+            margin-bottom: 30px;
+        }
+    }
+
+    &__wrap {
+        display: flex;
+        align-items: center;
+        margin-top: 5px;
+    }
+
+    &__flag {
+        display: flex;
+        align-items: center;
+        margin-right: 10px;
+        width: 25px;
+    }
+}

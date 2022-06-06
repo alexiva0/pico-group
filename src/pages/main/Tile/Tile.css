@@ -34,6 +34,7 @@
   }
 
   &__title {
+    @mixin bigText;
     position: relative;
   }
 }

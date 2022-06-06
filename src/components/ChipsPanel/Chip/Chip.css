@@ -1,0 +1,38 @@
+.chip {
+    background-color: transparent;
+    border: 1px solid var(--dark40);
+    border-radius: 100px;
+    box-sizing: border-box;
+    color: var(--light);
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    outline: none;
+    overflow: hidden;
+    text-align: center;
+    text-decoration: none;
+    transition: all 0.7s cubic-bezier(0.19, 1, 0.22, 1) 0.1s;
+
+    @media (--mobileSM) {
+        height: 35px;
+        padding: 0 15px;
+    }
+
+    @media (--mobileBU) {
+        height: 40px;
+        padding: 0 20px;
+    }
+
+    &:not(:last-child) {
+        margin-right: 15px;
+    }
+
+    &:hover {
+        border: 1px solid var(--light);
+    }
+
+    &_chosen {
+        background-color: var(--dark60);
+        border: 1px solid var(--light);
+    }
+}

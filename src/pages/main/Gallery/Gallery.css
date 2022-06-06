@@ -1,79 +1,56 @@
-$b: .gallery;
+.gallery {
+  overflow: hidden;
 
-.image-gallery {
-  .image-gallery-play-button {
-    bottom: auto;
-    top: 98px;
-    left: 10px;
-    right: auto;
-    padding: 10px;
+  @media (--mobileB) {
+    padding-bottom: 80px;
+    padding-top: 60px;
   }
 
-  .image-gallery-fullscreen-button {
-    bottom: auto;
-    top: 30px;
-    left: 10px;
-    right: auto;
-    padding: 10px;
+  @media (--desktop) {
+    padding-bottom: 100px;
+    padding-top: 80px;
   }
-
-  .image-gallery-slide {
-    background-color: var(--dark80);
-  }
-
-  .image-gallery-description {
-    @mixin p;
-    background-color: color(var(--dark60) a(80%));
-    bottom: 0;
-    box-sizing: border-box;
-    padding: 15px 30px;
-    text-align: left;
-    width: 100%;
-  }
-
-  .image-gallery-thumbnail .image-gallery-thumbnail-image {
-    max-width: 100%;
-    max-height: 60px;
-  }
-}
-
-$(b) {
-  padding-bottom: 100px;
-  padding-top: 80px;
 
   &__title {
-    margin-bottom: 50px;
-  }
-
-  &__container {
-    display: flex;
-  }
-
-  &__column {
-    flex-grow: 1;
-
-    &:not(:last-child) {
-      margin-right: 20px
-    }
-  }
-
-  &__image-box {
-    cursor: pointer;
-    margin-bottom: 20px;
-    transform: scale(1);
-    transition: transform ease-in 0.15s;
-
-    &:hover {
-      transform: scale(1.01);
-    }
+    margin-bottom: 40px;
   }
 
   &__image {
-    display: block;
+    @media (--desktop) {
+      height: 400px;
+    }
+  }
+
+  &__slide {
+    display: inline-flex;
+    position: relative;
+  }
+
+  &__footnote {
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.6) 61.46%, rgba(0, 0, 0, 0.7) 100%);
+    box-sizing: border-box;
+    display: flex;
+    justify-content: flex-end;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    padding: 30px 20px 10px;
+    width: 100%;
+    z-index: 2;
+  }
+
+  &__text {
+    @mixin smallText;
+    max-height: 20px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    transition: max-height 0.7s cubic-bezier(0.19, 1, 0.22, 1) 0.1s;
+    white-space: nowrap;
     width: 100%;
   }
 
-  &__popup {
-    width: 100%;
+  &__footnote:hover &__text {
+    max-height: 200px;
+    white-space: normal;
   }
 }

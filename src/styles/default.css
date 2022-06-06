@@ -1,12 +1,12 @@
 html {
-    @mixin p;
     background-color: var(--dark80);
-    color: var(--light);
-    font-family: Mulish, Arial, 'Helvetica CY', 'Nimbus Sans L', sans-serif;
     min-width: 320px;
 }
 
 body {
+    @mixin p;
+    color: var(--light);
+    font-family: Mulish, Arial, 'Helvetica CY', 'Nimbus Sans L', sans-serif;
     overflow-x: hidden;
 }
 
@@ -37,9 +37,13 @@ p {
 a {
     color: var(--light);
     cursor: pointer;
-    text-decoration: underline;
+    text-decoration: underline solid 0.5px;
 
     &:hover {
         color: var(--blue);
     }
+}
+
+strong {
+    font-weight: 700;
 }

@@ -1,0 +1,205 @@
+$b: .carousel;
+$swiperWrapper: .swiper-wrapper;
+$swiperPagination: .swiper-pagination;
+$swiperPaginationLock: .swiper-pagination-lock;
+$swiperBullet: .swiper-pagination-bullet;
+$swiperBulletActive: .swiper-pagination-bullet-active;
+$swiperSlideVisible: .swiper-slide-visible;
+
+$(b) {
+    position: relative;
+    display: flex;
+
+    &__swiper {
+        position: relative;
+        display: flex;
+        flex-grow: 1;
+        flex-shrink: 1;
+        flex-wrap: wrap;
+        overflow: hidden;
+        max-width: 100%;
+    }
+
+    $(swiperWrapper) {
+        z-index: 1;
+        display: flex;
+    }
+
+    &__slide {
+        flex-shrink: 0;
+
+        @media (--desktop) {
+            backface-visibility: hidden;
+            opacity: 0;
+            transition: opacity 0.2s;
+        }
+    }
+
+    $(swiperSlideVisible) {
+        @media (--desktop) {
+            opacity: 1;
+            transition: opacity 0.4s;
+        }
+    }
+
+    &__arrow {
+        cursor: pointer;
+        user-select: none;
+    }
+
+    &__icon {
+        position: relative;
+        z-index: 2;
+    }
+
+    $(swiperPagination) {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        justify-self: center;
+        order: 2;
+        width: 100%;
+        padding-top: 40px;
+        position: relative;
+        z-index: 10;
+    }
+
+    $(swiperPagination)$(swiperPaginationLock) {
+        display: none;
+    }
+
+    $(swiperBullet) {
+        border: 1px solid var(--light);
+        border-radius: 50%;
+        box-sizing: border-box;
+        cursor: pointer;
+        height: 10px;
+        width: 10px;
+
+        &:before {
+            content: '';
+            display: block;
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+        }
+
+        &:not(:last-child) {
+            margin-right: 10px;
+        }
+
+        &:hover {
+            background-color: var(--dark60);
+        }
+    }
+
+    $(swiperBulletActive) {
+        background-color: var(--dark40);
+        cursor: default;
+
+        &:hover {
+            background-color: var(--dark40);
+        }
+    }
+
+    &_theme_carousel {
+        $(b)__swiper {
+            overflow: visible;
+        }
+
+        $(b)__slide {
+            opacity: 1;
+        }
+
+        $(b)__arrow {
+            border: 1px solid var(--light);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            filter: drop-shadow(0px 0px 14px rgba(0, 0, 0, 0.45));
+            height: 40px;
+            overflow: hidden;
+            position: absolute;
+            top: 50%;
+            transform: translateY(calc(-50% - 20px));
+            width: 40px;
+            z-index: 10;
+
+            &:before {
+                background-color: var(--dark80);
+                content: '';
+                height: 100%;
+                opacity: 60%;
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                width: 100%;
+            }
+
+            &:hover {
+                &:before {
+                    background-color: var(--dark60);
+                }
+            }
+
+            @media (--mobile) {
+                display: none;
+            }
+        }
+
+        $(b)__arrow_disabled {
+            display: none;
+        }
+
+        $(b)__arrow_prev {
+            right: calc(100% + 15px);
+        }
+
+        $(b)__arrow_next {
+            left: calc(100% + 15px);
+        }
+    }
+
+    &_theme_tabs {
+        align-items: center;
+
+        $(b)__arrow {
+            background-color: transparent;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 40px;
+            min-width: 40px;
+            transition: background-color 0.7s cubic-bezier(0.19, 1, 0.22, 1) 0.1s;
+
+            &:hover {
+                background-color: var(--dark70);
+            }
+        }
+
+        $(b)__arrow_prev {
+            order: 1;
+        }
+
+        $(b)__arrow_next {
+            order: 3;
+        }
+
+        $(b)__swiper {
+            order: 2;
+        }
+
+        $(b)__arrow_disabled {
+            cursor: auto;
+            opacity: 30%;
+
+            &:hover {
+                background-color: transparent;
+            }
+        }
+    }
+}

@@ -1,9 +1,17 @@
 $b: .latest-news;
 
 $(b) {
-  border-bottom: 1px solid var(--dark40);
-  padding-bottom: 80px;
-  padding-top: 80px;
+  border-bottom: 1px solid var(--dark60);
+
+  @media (--mobileB) {
+    padding-bottom: 60px;
+    padding-top: 60px;
+  }
+
+  @media (--desktop) {
+    padding-bottom: 80px;
+    padding-top: 80px;
+  }
 
   &__head {
     color: var(--light);
@@ -14,8 +22,10 @@ $(b) {
 
     &:hover {
       $(b)__arrow-icon {
-        fill: var(--blue);
         transform: translateX(10px);
+        path {
+          fill: var(--blue);
+        }
       }
 
       $(b)__text {
@@ -26,8 +36,15 @@ $(b) {
 
   &__title {
     @mixin h2;
-    height: 48px;
     overflow: hidden;
+
+    @media (--mobileB) {
+      height: 42px;
+    }
+
+    @media (--desktop) {
+      height: 48px;
+    }
   }
 
   &__text {

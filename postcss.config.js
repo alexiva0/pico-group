@@ -11,10 +11,10 @@ module.exports = {
             preserve: false,
             importFrom: 'src/styles/variables.css',
         }),
-        // require('postcss-custom-media')({
-        //     preserve: false,
-        //     importFrom: 'src/styles/media.css',
-        // }),
+        require('postcss-custom-media')({
+            preserve: false,
+            importFrom: 'src/styles/media.css',
+        }),
         require('postcss-calc'),
         require("postcss-color-function"),
     ],

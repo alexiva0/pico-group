@@ -1,6 +1,8 @@
 import React from 'react';
 import cnCreate from 'utils/cnCreate';
-import Intro from 'pages/main/Intro/Intro';
+import Banner from 'pages/main/Banner/Banner';
+import About from 'pages/main/About/About';
+import Infrastructure from 'pages/main/Infrastructure/Infrastructure';
 import Facilities from 'pages/main/Facilities/Facilities';
 import LatestNews from 'pages/main/LatestNews/LatestNews';
 import Gallery from 'pages/main/Gallery/Gallery';
@@ -10,7 +12,9 @@ const cn = cnCreate('main');
 const Main: React.FC = () => {
   return (
     <div className={cn()}>
-      <Intro />
+      <Banner />
+      <About />
+      <Infrastructure />
       <Facilities />
       <LatestNews />
       <Gallery />

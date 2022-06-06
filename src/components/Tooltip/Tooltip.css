@@ -8,11 +8,21 @@ $(b) {
   }
 
   &__inner {
+    @media (--mobileSM) {
+      padding-left: 15px;
+      padding-right: 15px;
+    }
+
+    @media (--mobileBU) {
+      padding-left: 45px;
+      padding-right: 45px;
+    }
+
     &[data-popper-placement='top'] {
       padding-bottom: 8px;
 
       $(b)__arrow {
-        border-color: var(--dark50) transparent transparent transparent;
+        border-color: var(--dark60) transparent transparent transparent;
         border-width: 8px 10px 0 10px;
         bottom: 1px;
       }
@@ -22,7 +32,7 @@ $(b) {
       padding-top: 8px;
 
       $(b)__arrow {
-        border-color: transparent transparent var(--dark50) transparent;
+        border-color: transparent transparent var(--dark60) transparent;
         border-width: 0 10px 8px 10px;
         top: 1px;
       }
@@ -32,7 +42,7 @@ $(b) {
       padding-right: 8px;
 
       $(b)__arrow {
-        border-color: transparent transparent transparent var(--dark50);
+        border-color: transparent transparent transparent var(--dark60);
         border-width: 10px 0 10px 8px;
         right: 1px;
       }
@@ -42,7 +52,7 @@ $(b) {
       padding-left: 8px;
 
       $(b)__arrow {
-        border-color: transparent var(--dark50) transparent transparent;
+        border-color: transparent var(--dark60) transparent transparent;
         border-width: 10px 8px 10px 0;
         left: 1px;
       }
@@ -50,7 +60,7 @@ $(b) {
   }
 
   &__body {
-    background-color: var(--dark50);
+    background-color: var(--dark60);
     box-shadow: 0 0 15px 0 rgb(0 0 0 / 45%);
     box-sizing: border-box;
     max-width: 700px;

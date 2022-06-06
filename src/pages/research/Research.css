@@ -1,15 +1,27 @@
 .research {
-    padding-top: 50px;
+    @media (--mobileB) {
+        padding-top: 20px;
+    }
+
+    @media (--desktop) {
+        padding-top: 50px;
+    }
 
     &__inner {
-        padding-bottom: 100px;
+        @media (--mobileB) {
+            padding-bottom: 60px;
+        }
+
+        @media (--desktop) {
+            padding-bottom: 80px;
+        }
     }
 
     &__title {
-        margin-bottom: 15px;
+        margin-bottom: 10px;
     }
 
     &__subtitle {
-        margin-bottom: 40px;
+        margin-bottom: 30px;
     }
 }

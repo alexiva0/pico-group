@@ -1,14 +1,28 @@
 .facilities {
-  border-bottom: 1px solid var(--dark40);
-  padding-bottom: 80px;
-  padding-top: 80px;
+  border-bottom: 1px solid var(--dark60);
+
+  @media (--mobileB) {
+    padding-bottom: 60px;
+    padding-top: 60px;
+  }
+
+  @media (--desktop) {
+    padding-bottom: 80px;
+    padding-top: 80px;
+  }
 
   &__container {
-    margin-bottom: 50px;
+    @media (--mobileB) {
+      margin-bottom: 40px;
+    }
+
+    @media (--desktop) {
+      margin-bottom: 60px;
+    }
   }
 
   &__title {
-    margin-bottom: 30px;
+    margin-bottom: 20px;
   }
 
   &__subtitle {
@@ -17,7 +31,7 @@
 
   &__paragraph {
     &:not(:last-of-type) {
-      margin-bottom: 20px;
+      margin-bottom: 10px;
     }
   }
 
@@ -38,15 +52,27 @@
     width: 100%;
   }
 
-  &__image {
-    display: block;
-    width: 100%;
+  &__content {
+    @media (--mobileB) {
+      margin-bottom: 30px;
+    }
   }
 
-  &__footnote {
-    background-color: var(--dark60);
-    box-sizing: border-box;
-    padding: 10px 20px;
-    width: 100%;
+  &__column_no-padding {
+    @media (--mobileB) {
+      padding-bottom: 0;
+    }
+  }
+
+  &__column_order_1 {
+    @media (--mobileB) {
+      order: 1;
+    }
+  }
+
+  &__column_order_2 {
+    @media (--mobileB) {
+      order: 2;
+    }
   }
 }
