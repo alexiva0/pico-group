@@ -1,11 +1,7 @@
 .layout-default {
     &__container {
-        @media (--mobileSM) {
+        @media (--mobile) {
             padding-top: 50px;
-        }
-
-        @media (--mobileB) {
-            padding-top: 60px;
         }
 
         @media (--desktop) {

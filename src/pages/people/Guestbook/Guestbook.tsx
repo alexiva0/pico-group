@@ -10,7 +10,7 @@ const Guestbook: React.FC = () => {
 
   const renderYear = (year: number, arr: IGuestbookYearList[], i: number) => (
     <div className={cn('year')} key={i * year}>
-      <h4 className={cn('title')}>{year}</h4>
+      <h3 className={cn('title')}>{year}</h3>
       <div className={cn('releases')}>
         {arr.map(({ name, description, date }: IGuestbookYearList, i: number) => (
            <div className={cn('person')} key={i + name}>

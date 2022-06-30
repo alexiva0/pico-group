@@ -2,34 +2,54 @@ $b: .latest-news;
 
 $(b) {
   border-bottom: 1px solid var(--dark60);
+  overflow: hidden;
 
-  @media (--mobileB) {
+  @media (--mobileSM) {
     padding-bottom: 60px;
     padding-top: 60px;
   }
 
-  @media (--desktop) {
+  @media (--mobileB) {
     padding-bottom: 80px;
     padding-top: 80px;
   }
 
+  @media (--desktop) {
+    padding-bottom: 100px;
+    padding-top: 100px;
+  }
+
   &__head {
     color: var(--light);
-    display: inline-flex;
-    align-items: center;
-    margin-bottom: 50px;
     text-decoration: none;
+
+    @media (--mobile) {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 30px;
+    }
+
+    @media (--desktop) {
+      display: inline-flex;
+      align-items: center;
+      margin-bottom: 50px;
+    }
 
     &:hover {
       $(b)__arrow-icon {
-        transform: translateX(10px);
-        path {
-          fill: var(--blue);
+        @media (--desktop) {
+          transform: translateX(10px);
+
+          path {
+            fill: var(--blue);
+          }
         }
       }
 
       $(b)__text {
-        transform: translateY(-100%);
+        @media (--desktop) {
+          transform: translateY(-100%);
+        }
       }
     }
   }
@@ -37,6 +57,10 @@ $(b) {
   &__title {
     @mixin h2;
     overflow: hidden;
+
+    @media (--mobileSM) {
+      height: 36px;
+    }
 
     @media (--mobileB) {
       height: 42px;
@@ -54,15 +78,36 @@ $(b) {
   }
 
   &__arrow-icon {
-    fill: var(--light);
-    margin-left: 15px;
-    transform: translateX(0);
-    transition: transform 0.7s cubic-bezier(0.19, 1, 0.22, 1) 0.1s;
+    @media (--mobileSM) {
+      height: 20px;
+      width: 20px;
+    }
+
+    @media (--mobileB) {
+      height: 24px;
+      width: 24px;
+    }
+
+    @media (--mobile) {
+      margin-left: 5px;
+    }
+
+    @media (--desktop) {
+      margin-left: 15px;
+      transform: translateX(0);
+      transition: transform 0.7s cubic-bezier(0.19, 1, 0.22, 1) 0.1s;
+    }
   }
 
   &__paragraph {
     &:not(:last-of-type) {
       margin-bottom: 20px;
     }
+  }
+
+  &__link {
+    @mixin smallText;
+    display: flex;
+    align-items: center;
   }
 }

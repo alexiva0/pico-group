@@ -23,11 +23,10 @@ const Publications: React.FC = () => {
   const { isMobileWide } = useAppContext();
   const { path } = useRouteMatch();
   const { submenu } = menu[3];
-  const earlierPublications = publicationsData.slice(3);
 
   const renderPublications = (year: number, publications: IPublicationsList[], i: number) => (
     <div key={i + year} className={cn('year')}>
-      <h4 className={cn('content-title')}>{year}</h4>
+      <h3 className={cn('content-title')}>{year}</h3>
       {publications.map(({ title, ...rest }, i) => (
         <Publication data={{ title, ...rest }} key={title + i} />
       ))}
@@ -36,21 +35,21 @@ const Publications: React.FC = () => {
 
   const renderThesis = (year: number, thesis: IPhdThesis[], i: number) => (
     <div key={i + year} className={cn('year')}>
-      <h4 className={cn('content-title')}>{year}</h4>
+      <h3 className={cn('content-title')}>{year}</h3>
       {thesis.map(({ title, ...rest }, i) => (
         <PhdThesis data={{ title, ...rest }} key={title + i} />
       ))}
     </div>
   );
 
-  const publicationsChipsData = earlierPublications.map(({ year, publications }, i) => ({
+  const publicationsChipsData = publicationsData.map(({ year, publications }, i) => ({
     title: year,
     content: renderPublications(year, publications, i)
   }));
 
   const publicationsChipsDataWithAllYears = [{
     title: 'All years',
-    content: earlierPublications.map(({ year, publications }, i) => renderPublications(year, publications, i))
+    content: publicationsData.map(({ year, publications }, i) => renderPublications(year, publications, i))
   }, ...publicationsChipsData];
 
   const thesisChipsData = phdThesis.map(({ year, thesis }, i) => ({
@@ -89,33 +88,12 @@ const Publications: React.FC = () => {
                   </Route>
 
                   <Route path={`${path}${submenu[0].url}`}>
-                    <h3 className={cn('subtitle')}>{submenu[0].title}</h3>
-                      {publicationsData[0].publications.map(({ title, ...rest }, i) => (
-                        <Publication data={{ title, ...rest }} key={title + i} />
-                      ))}
-                  </Route>
-
-                  <Route path={`${path}${submenu[1].url}`}>
-                    <h3 className={cn('subtitle')}>{submenu[1].title}</h3>
-                      {publicationsData[1].publications.map(({ title, ...rest }, i) => (
-                        <Publication data={{ title, ...rest }} key={title + i} />
-                      ))}
-                  </Route>
-
-                  <Route path={`${path}${submenu[2].url}`}>
-                    <h3 className={cn('subtitle')}>{submenu[2].title}</h3>
-                      {publicationsData[2].publications.map(({ title, ...rest }, i) => (
-                        <Publication data={{ title, ...rest }} key={title + i} />
-                      ))}
-                  </Route>
-
-                  <Route path={`${path}${submenu[3].url}`}>
-                    <h3 className={cn('subtitle')}>{submenu[3].title}</h3>
+                    <h2 className={cn('subtitle')}>{submenu[0].title}</h2>
                     <ChipsPanel data={publicationsChipsDataWithAllYears} />
                   </Route>
 
-                  <Route path={`${path}${submenu[4].url}`}>
-                    <h3 className={cn('subtitle')}>{submenu[4].title}</h3>
+                  <Route path={`${path}${submenu[1].url}`}>
+                    <h2 className={cn('subtitle')}>{submenu[1].title}</h2>
                     <ChipsPanel data={thesisChipsDataAllYears} />
                   </Route>
                 </div>

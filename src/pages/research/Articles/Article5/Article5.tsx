@@ -19,7 +19,7 @@ const Article1: React.FC = () => {
             classes={{root: cn('image')}}
             image={Image1}
             imgAlt="Scheme 1"
-            footnote="Fig 1: Current plateaus at I = nef of a hybrid single-electron turnstile measured at f = 20 MHz."
+            footnoteText="Fig 1: Current plateaus at I = nef of a hybrid single-electron turnstile measured at f = 20 MHz."
           />
         </div>
       </div>

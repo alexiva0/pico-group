@@ -62,33 +62,33 @@ const People: React.FC = () => {
                     <Redirect to={`${path}${submenu[0].url}`} />
                   </Route>
                   <Route path={`${path}${submenu[0].url}`}>
-                    <h3 className={cn('subtitle')}>{submenu[0].title}</h3>
+                    <h2 className={cn('subtitle')}>{submenu[0].title}</h2>
                     {generalAddress()}
                     {group.map((person, i) => (
                       <Person data={person} key={i + person.name} />
                     ))}
                   </Route>
                   <Route path={`${path}${submenu[1].url}`}>
-                    <h3 className={cn('subtitle')}>{submenu[1].title}</h3>
+                    <h2 className={cn('subtitle')}>{submenu[1].title}</h2>
                     {generalAddress()}
                     {admin.map((person, i) => (
                       <Person data={person} key={i + person.name} />
                     ))}
                   </Route>
                   <Route path={`${path}${submenu[2].url}`}>
-                    <h3 className={cn('subtitle')}>{submenu[2].title}</h3>
+                    <h2 className={cn('subtitle')}>{submenu[2].title}</h2>
                     {formerGroupMembers.map(({ name }, i) => (
                       <p className={cn('former-group-name')} key={i + name}>· {name}</p>
                     ))}
                   </Route>
                   <Route path={`${path}${submenu[3].url}`}>
-                    <h3 className={cn('subtitle')}>{submenu[3].title}</h3>
+                    <h2 className={cn('subtitle')}>{submenu[3].title}</h2>
                     {recentVisitingScientists.map(({ name }, i) => (
                       <p className={cn('recent-visitor-name')} key={i + name}>· {name}</p>
                     ))}
                   </Route>
                   <Route path={`${path}${submenu[4].url}`}>
-                    <h3 className={cn('subtitle')}>{submenu[4].title}</h3>
+                    <h2 className={cn('subtitle')}>{submenu[4].title}</h2>
                     <Guestbook />
                   </Route>
                 </div>

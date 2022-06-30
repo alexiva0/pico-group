@@ -1,4 +1,6 @@
-.image-box {
+$b: .image-box;
+
+$(b) {
     position: relative;
     width: 100%;
 
@@ -8,30 +10,65 @@
     }
 
     &__footnote {
-        background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.6) 48.96%, rgba(0, 0, 0, 0.7) 100%);
-        box-sizing: border-box;
-        display: flex;
-        justify-content: flex-end;
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        padding: 40px 20px 10px;
+        background-color: var(--dark70);
         width: 100%;
-        z-index: 2;
     }
 
     &__text {
         @mixin smallText;
-        max-height: 20px;
-        overflow: hidden;
-        text-overflow: ellipsis;
-        transition: max-height 0.7s cubic-bezier(0.19, 1, 0.22, 1) 0.1s;
-        white-space: nowrap;
+        box-sizing: border-box;
         width: 100%;
+        z-index: 5;
+
+        @media (--mobileSM) {
+            padding: 5px 15px 10px;
+        }
+
+        @media (--mobileBU) {
+            padding: 10px 20px 15px;
+        }
     }
 
-    &:hover &__text {
-        max-height: 200px;
-        white-space: normal;
+    &_footnote-collapsed {
+        @media (--mobileSM) {
+            padding-bottom: 31px;
+        }
+
+        @media (--mobileBU) {
+            padding-bottom: 45px;
+        }
+
+        $(b)__footnote {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            z-index: 2;
+
+            &:before {
+                background: linear-gradient(180deg, rgba(36, 41, 44, 0.3) 0%, rgba(36, 41, 44, 0.8) 54.69%, rgba(36, 41, 44, 0.9) 80.21%, #24292C 89.58%, #24292C 100%);
+                content: '';
+                opacity: 1;
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                transition: opacity 0.7s cubic-bezier(0.19, 1, 0.22, 1) 0.1s;
+                width: 100%;
+                z-index: 10;
+
+                @media (--mobileSM) {
+                    height: 10px;
+                }
+
+                @media (--mobileBU) {
+                    height: 15px;
+                }
+            }
+        }
+
+        $(b)__footnote_unfolded {
+            &:before {
+                opacity: 0;
+            }
+        }
     }
 }

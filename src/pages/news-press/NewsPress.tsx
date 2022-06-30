@@ -45,12 +45,12 @@ const NewsPress: React.FC = () => {
                   </Route>
 
                   <Route path={`${path}${submenu[0].url}`} exact>
-                    <h3 className={cn('subtitle')}>{submenu[0].title}</h3>
+                    <h2 className={cn('subtitle')}>{submenu[0].title}</h2>
                     <News />
                   </Route>
 
                   <Route path={`${path}${submenu[1].url}`}>
-                    <h3 className={cn('subtitle')}>{submenu[1].title}</h3>
+                    <h2 className={cn('subtitle')}>{submenu[1].title}</h2>
                     <Press />
                   </Route>
 

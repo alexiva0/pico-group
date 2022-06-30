@@ -21,7 +21,7 @@ const Person: React.FC<IPersonProps> = ({ data }) => {
           }
         </div>
         <div>
-          <p className={cn('name')}>{name}</p>
+          <h5 className={cn('name')}>{name}</h5>
           {degree && (
             <p className={cn('degree')}>{degree}</p>
           )}

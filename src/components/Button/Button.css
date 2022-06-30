@@ -9,15 +9,24 @@
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    height: 50px;
-    min-width: 200px;
     outline: none;
-    padding: 0 30px;
     position: relative;
     text-align: center;
     text-decoration: none;
-    transition: color 0.7s cubic-bezier(0.19, 1, 0.22, 1) 0.1s;
+    transition: all 0.7s cubic-bezier(0.19, 1, 0.22, 1) 0.1s;
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+
+    @media (--mobileSM) {
+        height: 40px;
+        min-width: 200px;
+        padding: 0 20px;
+    }
+
+    @media (--mobileBU) {
+        height: 50px;
+        min-width: 250px;
+        padding: 0 30px;
+    }
 
     &:before {
         background-color: var(--light);
@@ -44,9 +53,10 @@
     }
 
     &:active {
+        border-color:  var(--dark40);
+
         &:before {
             background-color: var(--dark40);
-            border-color:  var(--dark40);
         }
     }
 

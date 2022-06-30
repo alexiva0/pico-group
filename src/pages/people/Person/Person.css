@@ -52,17 +52,24 @@
         }
 
         @media (--mobileSM) {
-            flex-wrap: wrap;
+            flex-direction: column;
         }
     }
 
     &__title {
-        @mixin p;
+       font-weight: 700;
         display: block;
         font-weight: 700;
-        margin-right: 10px;
         min-width: 100px;
         max-width: 100px;
+
+        @media (--mobileSM) {
+            margin-bottom: 5px;
+        }
+
+        @media (--mobileBU) {
+            margin-right: 10px;
+        }
     }
 
     &__image-box {
@@ -94,7 +101,7 @@
     }
 
     &__name {
-        font-weight: 700;
+        @mixin h5;
         margin-bottom: 5px;
     }
 

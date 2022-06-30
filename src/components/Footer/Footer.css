@@ -19,17 +19,17 @@
   }
 
   &__logo {
+    font-size: 30px;
     display: block;
     text-decoration: none;
+
+    &:hover {
+      color: var(--light);
+    }
 
     @media (--mobileBU) {
       margin-bottom: 40px;
     }
-  }
-
-  &__logo-text {
-    color: var(--light);
-    font-size: 30px;
   }
 
   &__wrap {

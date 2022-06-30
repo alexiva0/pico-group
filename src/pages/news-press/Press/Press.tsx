@@ -8,7 +8,7 @@ const cn = cnCreate('press');
 const Press: React.FC = () => {
   const renderYear = (year: number, arr: IRelease[], i: number) => (
     <div className={cn('year')} key={i * year}>
-      <h4 className={cn('title')}>{year}</h4>
+      <h3 className={cn('title')}>{year}</h3>
       <div className={cn('releases')}>
         {arr.map(({ date, text }: IRelease, i: number) => (
           <div className={cn('item')} key={i + date}>

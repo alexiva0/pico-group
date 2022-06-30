@@ -19,7 +19,7 @@ const Article1: React.FC = () => {
             classes={{root: cn('image')}}
             image={Image1}
             imgAlt="Scheme 1"
-            footnote="Figure 1."
+            footnoteText="Figure 1."
           />
           <p className={cn('paragraph')}>In parallel to this, PICO group has established itself as a leading research group for low temperature thermometry, and we use this expertise to generate and measure heat flow across our devices, using Normal Metal – Insulator -Superconductor (NIS) heterostructure based bolometry.</p>
           <p className={cn('paragraph')}>Is it our aim to use this quantum heat engine to further our understanding of heat transport in the quantum limit, and provide a platform for quantum thermodynamic experiments, such as those reported<a href="http://iopscience.iop.org/article/10.1088/1367-2630/17/3/035012" target="_blank" rel="noreferrer">here</a>.</p>
@@ -28,13 +28,13 @@ const Article1: React.FC = () => {
             classes={{root: cn('image')}}
             image={Image2}
             imgAlt="Scheme 2"
-            footnote="Figure 2."
+            footnoteText="Figure 2."
           />
           <ImageBox
             classes={{root: cn('image')}}
             image={Image3}
             imgAlt="Scheme 3"
-            footnote="Figure 3."
+            footnoteText="Figure 3."
           />
         </div>
       </div>

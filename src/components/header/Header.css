@@ -14,12 +14,8 @@ $(b) {
     align-items: center;
     justify-content: space-between;
 
-    @media (--mobileSM) {
+    @media (--mobile) {
       height: 50px;
-    }
-
-    @media (--mobileB) {
-      height: 60px;
     }
 
     @media (--desktop) {
@@ -36,11 +32,7 @@ $(b) {
       color: var(--light);
     }
 
-    @media (--mobileSM) {
-      font-size: 20px;
-    }
-
-    @media (--mobileB) {
+    @media (--mobile) {
       font-size: 24px;
     }
 
@@ -95,7 +87,8 @@ $(b) {
   &__item {
     @mixin bigText;
     cursor: pointer;
-    display: inline-block;
+    display: inline-flex;
+    align-items: center;
     position: relative;
 
     &:after {
@@ -112,7 +105,7 @@ $(b) {
     }
   }
 
-  &__link_active &__item {
+  &__link_active &__item, &__link:hover &__item {
     &:after {
       transform-origin: left;
       transform: scaleX(1);
@@ -123,12 +116,8 @@ $(b) {
     cursor: pointer;
     position: relative;
 
-    @media (--mobileSM) {
-      width: 22px;
-    }
-
-    @media (--mobileB) {
-      width: 26px;
+    @media (--mobile) {
+      width: 30px;
     }
   }
 
@@ -142,11 +131,7 @@ $(b) {
     width: 100%;
 
     &:not(:last-child) {
-      @media (--mobileSM) {
-        margin-bottom: 4px;
-      }
-
-      @media (--mobileB) {
+      @media (--mobile) {
         margin-bottom: 6px;
       }
     }
@@ -154,10 +139,7 @@ $(b) {
 
   &__menu-icon_opened {
     $(b)__line_first {
-      @media (--mobileSM) {
-        transform: rotate(-45deg) translate(-5px, 4px)
-      }
-      @media (--mobileB) {
+      @media (--mobile) {
         transform: rotate(-45deg) translate(-6px, 5px);
       }
     }
@@ -168,11 +150,7 @@ $(b) {
     }
 
     $(b)__line_third {
-      @media (--mobileSM) {
-        transform: rotate(45deg) translate(-4px, -4px);
-      }
-
-      @media (--mobileB) {
+      @media (--mobile) {
         transform: rotate(45deg) translate(-6px, -5px);
       }
     }

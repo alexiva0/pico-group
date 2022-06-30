@@ -7,6 +7,7 @@
     cursor: pointer;
     display: inline-flex;
     align-items: center;
+    letter-spacing: -0.5px;
     outline: none;
     overflow: hidden;
     text-align: center;
@@ -15,16 +16,12 @@
 
     @media (--mobileSM) {
         height: 35px;
-        padding: 0 15px;
+        padding: 0 10px;
     }
 
     @media (--mobileBU) {
         height: 40px;
         padding: 0 20px;
-    }
-
-    &:not(:last-child) {
-        margin-right: 15px;
     }
 
     &:hover {

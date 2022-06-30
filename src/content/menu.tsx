@@ -55,7 +55,7 @@ export const menu = [
                 url: '/former-group-members',
             },
             {
-                title: 'Recent visiting scientists in\u00A0the\u00A0group',
+                title: 'Recent visiting scientists',
                 url: '/recent-visiting-scientists',
             },
             {
@@ -74,20 +74,8 @@ export const menu = [
         url: '/publications',
         submenu: [
             {
-                title: '2021',
-                url: '/2021',
-            },
-            {
-                title: '2020',
-                url: '/2020',
-            },
-            {
-                title: '2019',
-                url: '/2019',
-            },
-            {
-                title: 'Earlier',
-                url: '/earlier',
+                title: 'By year',
+                url: '/years',
             },
             {
                 title: 'PhD Theses',

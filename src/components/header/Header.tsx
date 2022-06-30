@@ -56,9 +56,9 @@ const Header: React.FC = () => {
   const renderItemsList = () => (
     <div className={cn('list')}>
       {menu.map(({ title, url }, index) => (
-        <div className={cn('wrap')} key={title + index}>
+        <nav className={cn('wrap')} key={title + index}>
           {renderMenuLink(title, url)}
-        </div>
+        </nav>
       ))}
     </div>
   );
@@ -89,9 +89,9 @@ const Header: React.FC = () => {
               )}
             </div>
           ) : (
-            <div className={cn('wrap')} key={title + index}>
+            <nav className={cn('wrap')} key={title + index}>
               {renderMenuLink(title, url)}
-            </div>
+            </nav>
           )
         );
       })}
@@ -99,7 +99,7 @@ const Header: React.FC = () => {
   );
 
   return (
-    <div className={cn()}>
+    <header className={cn()}>
       <ContentArea>
         <div className={cn('inner')}>
           <NavLink to="/" className={cn('logo')}>PICO</NavLink>
@@ -117,7 +117,7 @@ const Header: React.FC = () => {
           </div>
         </Collapse>
       )}
-    </div>
+    </header>
   );
 };
 

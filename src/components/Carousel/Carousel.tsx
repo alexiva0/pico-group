@@ -45,7 +45,7 @@ export interface ICarouselProps {
 const defaultSlidesSettings: SlidesSettingsType = {
     [BP.MOBILE_SMALL_START]: {
         slidesPerView: 'auto',
-        spaceBetween: 16,
+        spaceBetween: 10,
     },
     [BP.MOBILE_BIG_START]: {
         slidesPerView: 'auto',
@@ -61,7 +61,7 @@ const cn = cnCreate('carousel');
 const Carousel: React.FC<ICarouselProps> = ({
     className,
     slidesSettings = defaultSlidesSettings,
-    pagination,
+    pagination = true,
     theme = 'carousel',
     loop = false,
     initialSlide = 1,

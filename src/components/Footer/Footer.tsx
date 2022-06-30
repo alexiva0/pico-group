@@ -1,5 +1,6 @@
 import React from 'react';
 import cnCreate from 'utils/cnCreate';
+import { NavLink } from 'react-router-dom';
 import useAppContext from 'hooks/useAppContext';
 import ContentArea from 'components/ContentArea/ContentArea';
 import Grid from 'components/Grid/Grid';
@@ -15,15 +16,13 @@ const Footer: React.FC = () => {
   );
 
   return (
-    <div className={cn()}>
+    <footer className={cn()}>
       <ContentArea>
         <div className={cn('inner')}>
           <Grid>
             <GridColumn all="8" tablet="6" mobile="12">
               <div className={cn('wrap')}>
-                <a href="/" className={cn('logo')}>
-                  <p className={cn('logo-text')}>PICO</p>
-                </a>
+                <NavLink to="/" className={cn('logo')}>PICO</NavLink>
                 {!isMobile && renderCopyright()}
               </div>
             </GridColumn>
@@ -52,7 +51,7 @@ const Footer: React.FC = () => {
           {isMobile && renderCopyright()}
         </div>
       </ContentArea>
-    </div>
+    </footer>
   );
 };
 

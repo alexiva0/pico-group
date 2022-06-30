@@ -45,27 +45,27 @@ const Research: React.FC = () => {
                   <Redirect to={`${path}${submenu[0].url}`} />
                 </Route>
                 <Route path={`${path}${submenu[0].url}`}>
-                  <h3 className={cn('subtitle')}>{submenu[0].title}</h3>
+                  <h2 className={cn('subtitle')}>{submenu[0].title}</h2>
                   <Article1 />
                 </Route>
                 <Route path={`${path}${submenu[1].url}`}>
-                  <h3 className={cn('subtitle')}>{submenu[1].title}</h3>
+                  <h2 className={cn('subtitle')}>{submenu[1].title}</h2>
                   <Article2 />
                 </Route>
                 <Route path={`${path}${submenu[2].url}`}>
-                  <h3 className={cn('subtitle')}>{submenu[2].title}</h3>
+                  <h2 className={cn('subtitle')}>{submenu[2].title}</h2>
                   <Article3 />
                 </Route>
                 <Route path={`${path}${submenu[3].url}`}>
-                  <h3 className={cn('subtitle')}>{submenu[3].title}</h3>
+                  <h2 className={cn('subtitle')}>{submenu[3].title}</h2>
                   <Article4 />
                 </Route>
                 <Route path={`${path}${submenu[4].url}`}>
-                  <h3 className={cn('subtitle')}>{submenu[4].title}</h3>
+                  <h2 className={cn('subtitle')}>{submenu[4].title}</h2>
                   <Article5 />
                 </Route>
                 <Route path={`${path}${submenu[5].url}`}>
-                  <h3 className={cn('subtitle')}>{submenu[5].title}</h3>
+                  <h2 className={cn('subtitle')}>{submenu[5].title}</h2>
                   <Article6 />
                 </Route>
               </div>

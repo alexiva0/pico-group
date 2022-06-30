@@ -1,8 +1,9 @@
-import React from 'react';
+import React, { useRef, useState, useEffect } from 'react';
 
 interface IProps {
     className?: string;
     classNameContainer?: string;
+    initialHeight?: number;
     isOpened: boolean;
 };
 
@@ -11,13 +12,14 @@ const BROWSER_DELAY = 100;
 const Collapse: React.FC<IProps> = ({
     className,
     classNameContainer,
+    initialHeight = 0,
     children,
     isOpened = false,
 }) => {
-    const canUpdate = React.useRef(false);
-    const timer = React.useRef<number | undefined>(undefined);
-    const rootNode = React.useRef<HTMLInputElement>(null);
-    const [height, setHeight] = React.useState('0px');
+    const canUpdate = useRef(false);
+    const timer = useRef<number | undefined>(undefined);
+    const rootNode = useRef<HTMLInputElement>(null);
+    const [height, setHeight] = useState(`${initialHeight}px`);
     const duration: number = 300;
     const transition: string = `height ${duration / 1000}s`;
 
@@ -31,30 +33,30 @@ const Collapse: React.FC<IProps> = ({
         }, delay);
     };
 
-    React.useEffect(() => {
+    useEffect(() => {
         switch (true) {
             case !canUpdate.current && isOpened:
                 setHeight('auto');
                 break;
             case !canUpdate.current && !isOpened:
-                setHeight('0px');
+                setHeight(`${initialHeight}px`);
                 break;
             case isOpened:
                 animateSlide('auto', duration);
                 break;
             default:
-                animateSlide('0px', BROWSER_DELAY);
+                animateSlide(`${initialHeight}px`, BROWSER_DELAY);
         }
 
         canUpdate.current = true;
 
         return (): void => clearTimeout(timer.current);
-    }, [isOpened, duration]);
+    }, [isOpened, initialHeight, duration]);
 
     return (
         <div
             className={className}
-            style={{ overflow: 'hidden', height, transition }}
+            style={{ overflow: 'hidden', width: '100%', height, transition }}
             ref={rootNode}
         >
             <div className={classNameContainer}>{children}</div>
