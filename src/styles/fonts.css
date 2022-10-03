@@ -1,0 +1,13 @@
+@font-face {
+    font-family: Mulish;
+    src: url('./fonts/Mulish-Light.ttf') format('truetype');
+    font-weight: light;
+    font-style: light;
+}
+
+@font-face {
+    font-family: MerriweatherSans;
+    src: url('./fonts/MerriweatherSans-Light.ttf') format('truetype');
+    font-weight: light;
+    font-style: light;
+}

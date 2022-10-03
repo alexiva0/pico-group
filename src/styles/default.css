@@ -1,0 +1,49 @@
+html {
+    background-color: var(--dark80);
+    min-width: 320px;
+}
+
+body {
+    @mixin p;
+    color: var(--light);
+    font-family: Mulish, Arial, 'Helvetica CY', 'Nimbus Sans L', sans-serif;
+    overflow-x: hidden;
+}
+
+button, h1, h2, h3, h4, h5, p {
+    margin: 0;
+}
+
+h1 {
+    @mixin h1;
+}
+
+h2 {
+    @mixin h2;
+}
+
+h3 {
+    @mixin h3;
+}
+
+h4 {
+    @mixin h4;
+}
+
+p {
+    @mixin p;
+}
+
+a {
+    color: var(--light);
+    cursor: pointer;
+    text-decoration: underline solid 0.5px;
+
+    &:hover {
+        color: var(--blue);
+    }
+}
+
+strong {
+    font-weight: 700;
+}

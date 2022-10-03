@@ -1,0 +1,16 @@
+@custom-media --mobileS screen and (max-width: 479px);                                  /* ∞ - 479 */
+@custom-media --mobileM screen and (min-width: 480px) and (max-width: 767px);           /* 480 - 767 */
+@custom-media --mobileB screen and (min-width: 768px) and (max-width: 1023px);          /* 768 - 1023 */
+@custom-media --mobileSM screen and (max-width: 767px);                                 /* ∞ - 767 */
+@custom-media --mobileMB screen and (min-width: 480px) and (max-width: 1023px);         /* 480 - 1023 */
+@custom-media --mobileMU screen and (min-width: 480px);                                 /* 480 - ∞ */
+@custom-media --mobileBU screen and (min-width: 768px);                                 /* 768 - ∞ */
+@custom-media --mobileBH screen and (min-width: 768px) and (max-width: 1279px);         /* 768 - 1279 */
+@custom-media --mobile screen and (max-width: 1023px);                                  /* ∞ - 1023 */
+@custom-media --desktop screen and (min-width: 1024px);                                 /* 1024 - ∞ */
+@custom-media --desktopS screen and (min-width: 1024px) and (max-width: 1279px);        /* 1024 - 1279 */
+@custom-media --desktopM screen and (min-width: 1280px) and (max-width: 1439px);        /* 1280 - 1439 */
+@custom-media --desktopB screen and (min-width: 1440px);                                /* 1440 - ∞ */
+@custom-media --desktopSM screen and (min-width: 1024px) and (max-width: 1439px);       /* 1024 - 1439 */
+@custom-media --desktopMU screen and (min-width: 1280px);                               /* 1280 - ∞ */
+@custom-media --desktopHD screen and (min-width: 1921px);                               /* 1921 - ∞ */

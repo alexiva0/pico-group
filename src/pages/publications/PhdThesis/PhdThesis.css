@@ -1,0 +1,24 @@
+.phd-thesis {
+    &__panel {
+        margin-bottom: 30px;
+    }
+
+    &__wrap {
+        margin-bottom: -15px;
+        margin-right: -15px;
+    }
+
+    &__chip {
+        margin-bottom: 15px;
+    }
+
+    &__person {
+        &:not(:last-child) {
+            margin-bottom: 25px;
+        }
+    }
+
+    &__title {
+        font-weight: 700;
+    }
+}

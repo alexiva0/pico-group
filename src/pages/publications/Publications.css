@@ -1,0 +1,39 @@
+.publications {
+    @media (--mobileB) {
+        padding-top: 20px;
+    }
+
+    @media (--desktop) {
+        padding-top: 50px;
+    }
+
+    &__inner {
+        @media (--mobileB) {
+            padding-bottom: 60px;
+        }
+
+        @media (--desktop) {
+            padding-bottom: 80px;
+        }
+    }
+
+    &__title {
+        margin-bottom: 10px;
+    }
+
+    &__subtitle {
+        margin-bottom: 30px;
+    }
+
+    &__year {
+        &:not(:last-child) {
+            border-bottom: 1px solid var(--dark60);
+            margin-bottom: 25px;
+            padding-bottom: 25px;
+        }
+    }
+
+    &__content-title {
+        margin-bottom: 20px;
+    }
+}

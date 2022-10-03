@@ -1,0 +1,70 @@
+.infrastructure {
+  border-bottom: 1px solid var(--dark60);
+
+  @media (--mobileSM) {
+    padding-bottom: 60px;
+    padding-top: 60px;
+  }
+
+  @media (--mobileB) {
+    padding-bottom: 80px;
+    padding-top: 80px;
+  }
+
+  @media (--desktop) {
+    padding-bottom: 100px;
+    padding-top: 100px;
+  }
+
+  &__title {
+    margin-bottom: 20px;
+  }
+
+  &__paragraph {
+    margin-bottom: 40px;
+
+    @media (--mobileSM) {
+      margin-bottom: 30px;
+    }
+  }
+
+  &__links {
+    display: flex;
+  }
+
+  &__link {
+    &:not(:last-child) {
+      margin-right: 30px;
+    }
+  }
+
+  &__link:hover &__icon path {
+    fill: var(--blue);
+  }
+
+  &__icon {
+    display: block;
+    height: 40px;
+    width: auto;
+  }
+
+  &__image {
+    @media (--mobileSM) {
+      position: relative;
+      left: -15px;
+      width: calc(100% + 30px);
+    }
+
+    @media (--mobileB) {
+      position: relative;
+      left: -45px;
+      width: calc(100% + 90px);
+    }
+
+    @media (--desktopS) {
+      position: relative;
+      left: 50px;
+      width: calc(100% - 50px);
+    }
+  }
+}

@@ -1,0 +1,33 @@
+.about {
+  border-bottom: 1px solid var(--dark60);
+
+  @media (--mobileSM) {
+    padding-bottom: 60px;
+    padding-top: 60px;
+  }
+
+  @media (--mobileB) {
+    padding-bottom: 80px;
+    padding-top: 80px;
+  }
+
+  @media (--desktop) {
+    padding-bottom: 100px;
+    padding-top: 100px;
+  }
+
+  &__image {
+    width: 100%;
+  }
+
+  &__title {
+    margin-bottom: 20px;
+    width: 100%;
+  }
+
+  &__paragraph {
+    &:not(:last-child) {
+      padding-bottom: 10px;
+    }
+  }
+}

@@ -1,0 +1,40 @@
+.tile {
+  height: 100%;
+
+  &__link {
+    display: block;
+    height: 100%;
+    position: relative;
+    text-decoration: none;
+
+    &:before {
+      background-color: var(--dark70);
+      content: '';
+      height: calc(100% + 40px);
+      opacity: 0;
+      position: absolute;
+      top: -20px;
+      left: -20px;
+      transition: opacity 0.7s cubic-bezier(0.19, 1, 0.22, 1) 0.1s;
+      width: calc(100% + 40px);
+    }
+
+    &:hover {
+      color: var(--light);
+
+      &:before {
+        opacity: 1;
+      }
+    }
+  }
+
+  &__date {
+    margin-bottom: 10px;
+    opacity: 60%;
+  }
+
+  &__title {
+    @mixin bigText;
+    position: relative;
+  }
+}
