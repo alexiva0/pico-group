@@ -21,21 +21,21 @@ $(b) {
         z-index: 5;
 
         @media (--mobileSM) {
-            padding: 5px 15px 10px;
+            padding: 10px 15px 10px;
         }
 
         @media (--mobileBU) {
-            padding: 10px 20px 15px;
+            padding: 15px 20px 15px;
         }
     }
 
     &_footnote-collapsed {
         @media (--mobileSM) {
-            padding-bottom: 31px;
+            padding-bottom: 36px;
         }
 
         @media (--mobileBU) {
-            padding-bottom: 45px;
+            padding-bottom: 50px;
         }
 
         $(b)__footnote {

@@ -19,7 +19,7 @@ const Banner: React.FC = () => {
       <ContentArea className={cn('inner')}>
         <div className={cn('content')}>
           <h1 className={cn('title')}>Quantum phenomena and{'\u00A0'}devices</h1>
-          <p className={cn('paragraph')}>We are one of the eleven strong research groups focusing on experiments on single quanta in solid state and device physics, theory of open quantum systems, and engineering capability to implement quantum technology.</p>
+          <p className={cn('paragraph')}>We are one of the eleven strong research groups focusing on{'\u00A0'}experiments on single quanta in solid state and device physics, theory of open quantum systems, and engineering capability to{'\u00A0'}implement quantum technology.</p>
           <Button href="/research">Our research</Button>
         </div>
       </ContentArea>

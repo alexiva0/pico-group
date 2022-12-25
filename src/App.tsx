@@ -44,7 +44,7 @@ const App: React.FC = () => {
   return (
     <AppContext>
       <Router>
-        <div className={cn('container')}>
+        <div className={cn()}>
           <Header />
           <Switch>
             <Route path={menu[4].url}>
