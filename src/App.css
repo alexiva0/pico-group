@@ -1,12 +1,10 @@
 .layout-default {
-    &__container {
-        @media (--mobile) {
-            padding-top: 50px;
-        }
+    @media (--mobile) {
+        padding-top: 50px;
+    }
 
-        @media (--desktop) {
-            padding-top: 70px;
-        }
+    @media (--desktop) {
+        padding-top: 70px;
     }
 
     &__scroll-top {

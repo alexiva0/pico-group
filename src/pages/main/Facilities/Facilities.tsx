@@ -32,7 +32,7 @@ const Facilities: React.FC = () => (
         </div>
         <Grid vAlign="center">
           <GridColumn all="6" mobile="12" tablet="12" className={cn('column', { order: '2' })}>
-            <ImageBox image={Image2} footnoteText="Two of our dilution refrigerators in the fourth floor lab." footnoteType="unfolded" />
+            <ImageBox image={Image2} footnoteText="Two of our dilution refrigerators in the fourth floor lab." />
           </GridColumn>
           <GridColumn all="6" mobile="12" tablet="12" className={cn('column', { order: '1', 'no-padding': true })}>
             <h3 className={cn('subtitle')}>

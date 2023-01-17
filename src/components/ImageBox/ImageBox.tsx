@@ -26,7 +26,7 @@ const ImageBox: React.FC<IImageBoxProps> = ({
     const { isMobileWide, isMobile } = useAppContext();
     const [isNoteOpened, setNoteOpened] = useState(false);
     const alt = imgAlt ? imgAlt : footnoteText;
-    const initialFootnoteHeight = isMobile ? 31 : 45;
+    const initialFootnoteHeight = isMobile ? 36 : 50;
 
     const handleTextHover = () => {
         !isMobileWide && setNoteOpened(true);
