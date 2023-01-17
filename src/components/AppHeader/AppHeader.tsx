@@ -6,10 +6,10 @@ import SideMenu from 'components/SideMenu/SideMenu';
 import ContentArea from 'components/ContentArea/ContentArea';
 import Collapse from 'components/Collapse/Collapse';
 import { menu } from 'content/menu';
-import './Header.css';
+import './AppHeader.css';
 
 const cn = cnCreate('header');
-const Header: React.FC = () => {
+const AppHeader: React.FC = () => {
   const { isMobileWide } = useAppContext();
 
   const [isMenuOpened, setMenuOpened] = useState(false);
@@ -121,4 +121,4 @@ const Header: React.FC = () => {
   );
 };
 
-export default Header;
+export default AppHeader;
