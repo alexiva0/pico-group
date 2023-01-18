@@ -1,4 +1,8 @@
 .phd-thesis {
+    &:not(:last-child) {
+        margin-bottom: 25px;
+    }
+
     &__panel {
         margin-bottom: 30px;
     }
@@ -10,12 +14,6 @@
 
     &__chip {
         margin-bottom: 15px;
-    }
-
-    &__person {
-        &:not(:last-child) {
-            margin-bottom: 25px;
-        }
     }
 
     &__title {

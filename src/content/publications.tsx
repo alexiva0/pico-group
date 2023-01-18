@@ -858,7 +858,7 @@ export const publicationsData = [
             },
             {
                 participants: 'R. Arpaia, D. Golubev, R. Baghdadi, R. Ciancio, G. Drazic, P. Orgiani, D. Montemurro, T. Bauch, and F. Lombardi',
-                title: 'Transport properties of ultrathin YBa2Cu3O_(7−\delta) nanowires: A route to single-photon detection',
+                title: 'Transport properties of ultrathin YBa2Cu3O_(7−delta) nanowires: A route to single-photon detection',
                 links: [
                     {
                         linkText: 'Phys. Rev. B <b>96</b>, 064525 (2017)',

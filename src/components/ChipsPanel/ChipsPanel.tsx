@@ -28,9 +28,7 @@ const ChipsPanel: React.FC<IChipsPanelProps> = ({
         <div className={cn('', className)}>
             <div className={cn('panel')}>
                 <div className={cn('wrap')}>
-                    {data.map(({ title }, i) => {
-                        console.log(`${title} * ${i}`);
-                    return (
+                    {data.map(({ title }, i) => (
                         <Chip
                             key={`${title} + ${i}`}
                             className={cn('chip')}
@@ -39,7 +37,7 @@ const ChipsPanel: React.FC<IChipsPanelProps> = ({
                         >
                             {title}
                         </Chip>
-                    );})}
+                    ))}
                 </div>
             </div>
             <div className={cn('content')}>

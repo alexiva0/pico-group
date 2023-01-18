@@ -26,6 +26,10 @@
             background-color: var(--dark50);
             cursor: pointer;
         }
+
+        @media (--mobileSM) {
+            right: 15px;
+        }
     }
 
     &__scroll-top:hover {
