@@ -39,28 +39,24 @@ export const menu = [
         ],
     },
     {
-        title: 'People',
-        url: '/people',
+        title: 'Team',
+        url: '/team',
         submenu: [
             {
-                title: 'Group members',
-                url: '/group-members',
+                title: 'Senior Researchers',
+                url: '/senior-researchers',
             },
             {
-                title: 'Administration',
-                url: '/administration',
+                title: 'Postdoctoral Researchers',
+                url: '/postdoctoral-researchers',
+            },
+            {
+                title: 'Ph.D. Students',
+                url: '/phd-students',
             },
             {
                 title: 'Former group members',
                 url: '/former-group-members',
-            },
-            {
-                title: 'Recent visiting scientists',
-                url: '/recent-visiting-scientists',
-            },
-            {
-                title: 'Guestbook',
-                url: '/guestbook',
             },
         ],
     },

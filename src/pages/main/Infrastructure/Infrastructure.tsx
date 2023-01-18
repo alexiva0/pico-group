@@ -16,7 +16,7 @@ const Infrastructure: React.FC = () => {
           <GridColumn desktop="3" all="12">
             <div className={cn('content')}>
               <h2 className={cn('title')}>Infrastructure</h2>
-              <p className={cn('paragraph')}>We perform our low-temperature experiments (10 mK – 4 K) in our{'\u00A0'}laboratory in the Micronova building, jointly run by{'\u00A0'}Aalto{'\u00A0'}University.</p>
+              <p className={cn('paragraph')}>We perform our low-temperature experiments (10 mK – 4 K) in{'\u00A0'}our{'\u00A0'}laboratory in{'\u00A0'}the{'\u00A0'}Micronova building, jointly run by{'\u00A0'}Aalto{'\u00A0'}University.</p>
               <div className={cn('links')}>
                 <a href="http://physics.aalto.fi/" target="_blank" rel="noreferrer" className={cn('link')}>
                   <svg width="79" height="70" viewBox="0 0 43 38" fill="none" className={cn('icon')}>

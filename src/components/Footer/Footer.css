@@ -40,7 +40,7 @@
   }
 
   &__copyright {
-    opacity: 60%;
+    color: var(--paleLight);
 
     @media (--mobileSM) {
       margin-top: 30px;

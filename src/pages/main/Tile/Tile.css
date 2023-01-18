@@ -29,8 +29,10 @@
   }
 
   &__date {
+    color: var(--paleLight);
     margin-bottom: 10px;
-    opacity: 60%;
+    position: relative;
+    z-index: 2;
   }
 
   &__title {

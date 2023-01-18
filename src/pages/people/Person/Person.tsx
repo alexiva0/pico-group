@@ -9,7 +9,7 @@ interface IPersonProps {
 
 const cn = cnCreate('person');
 const Person: React.FC<IPersonProps> = ({ data }) => {
-  const { name, degree, image, address, phone, fax, email, publications } = data;
+  const { name, image, address, phone, fax, email, publications } = data;
 
   return (
     <div className={cn()}>
@@ -22,9 +22,6 @@ const Person: React.FC<IPersonProps> = ({ data }) => {
         </div>
         <div>
           <h5 className={cn('name')}>{name}</h5>
-          {degree && (
-            <p className={cn('degree')}>{degree}</p>
-          )}
           {publications && (
             <a target="_blank" rel="noreferrer" href={publications} className={cn('publication')}>Research activity on{'\u00A0'}Pulbons.com</a>
           )}

@@ -7,11 +7,10 @@ import Grid from 'components/Grid/Grid';
 import GridColumn from 'components/Grid/GridColumn';
 import ContentArea from 'components/ContentArea/ContentArea';
 import Person from 'pages/people/Person/Person';
-import Guestbook from 'pages/people/Guestbook/Guestbook';
 import {
-  groupPeople,
-  administration,
-  recentVisitingScientists,
+  seniorResearchers,
+  postdoctoralResearchers,
+  phdStudents,
   formerGroupMembers,
 } from 'content/people/people';
 import { menu } from 'content/menu';
@@ -23,8 +22,9 @@ const People: React.FC = () => {
   const { path } = useRouteMatch();
   const { submenu } = menu[1];
 
-  const { people: group } = groupPeople;
-  const { people: admin } = administration;
+  const { people: seniors } = seniorResearchers;
+  const { people: postdoctoral } = postdoctoralResearchers;
+  const { people: phd } = phdStudents;
 
   const text = 'Low Temperature Laboratory, Department of\u00A0Applied Physics, <br /> Aalto University School of\u00A0Science, P.O.\u00A0Box\u00A013500, <br /> 00076 AALTO, Finland';
 
@@ -64,32 +64,28 @@ const People: React.FC = () => {
                   <Route path={`${path}${submenu[0].url}`}>
                     <h2 className={cn('subtitle')}>{submenu[0].title}</h2>
                     {generalAddress()}
-                    {group.map((person, i) => (
+                    {seniors.map((person, i) => (
                       <Person data={person} key={i + person.name} />
                     ))}
                   </Route>
                   <Route path={`${path}${submenu[1].url}`}>
                     <h2 className={cn('subtitle')}>{submenu[1].title}</h2>
                     {generalAddress()}
-                    {admin.map((person, i) => (
+                    {postdoctoral.map((person, i) => (
                       <Person data={person} key={i + person.name} />
                     ))}
                   </Route>
                   <Route path={`${path}${submenu[2].url}`}>
+                    <h2 className={cn('subtitle')}>{submenu[3].title}</h2>
+                    {phd.map((person, i) => (
+                      <Person data={person} key={i + person.name} />
+                    ))}
+                  </Route>
+                  <Route path={`${path}${submenu[3].url}`}>
                     <h2 className={cn('subtitle')}>{submenu[2].title}</h2>
                     {formerGroupMembers.map(({ name }, i) => (
                       <p className={cn('former-group-name')} key={i + name}>· {name}</p>
                     ))}
-                  </Route>
-                  <Route path={`${path}${submenu[3].url}`}>
-                    <h2 className={cn('subtitle')}>{submenu[3].title}</h2>
-                    {recentVisitingScientists.map(({ name }, i) => (
-                      <p className={cn('recent-visitor-name')} key={i + name}>· {name}</p>
-                    ))}
-                  </Route>
-                  <Route path={`${path}${submenu[4].url}`}>
-                    <h2 className={cn('subtitle')}>{submenu[4].title}</h2>
-                    <Guestbook />
                   </Route>
                 </div>
               </div>

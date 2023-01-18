@@ -4,8 +4,8 @@
     }
 
     &__participants {
+        color: var(--paleLight);
         margin-bottom: 5px;
-        opacity: 60%;
     }
 
     &__title {

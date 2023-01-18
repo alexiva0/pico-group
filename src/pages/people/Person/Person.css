@@ -79,8 +79,6 @@
 
         @media (--mobileSM) {
             margin-right: 15px;
-            min-width: 100px;
-            width: 100px;
         }
 
         @media (--desktopMU) {
