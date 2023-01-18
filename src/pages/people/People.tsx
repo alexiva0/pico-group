@@ -42,7 +42,7 @@ const People: React.FC = () => {
       <ContentArea>
         <Grid>
           <GridColumn leftOffsetDesktop="3">
-            <h1 className={cn('title')}>People</h1>
+            <h1 className={cn('title')}>Team</h1>
           </GridColumn>
         </Grid>
         <Grid>
@@ -76,13 +76,14 @@ const People: React.FC = () => {
                     ))}
                   </Route>
                   <Route path={`${path}${submenu[2].url}`}>
-                    <h2 className={cn('subtitle')}>{submenu[3].title}</h2>
+                    <h2 className={cn('subtitle')}>{submenu[2].title}</h2>
+                    {generalAddress()}
                     {phd.map((person, i) => (
                       <Person data={person} key={i + person.name} />
                     ))}
                   </Route>
                   <Route path={`${path}${submenu[3].url}`}>
-                    <h2 className={cn('subtitle')}>{submenu[2].title}</h2>
+                    <h2 className={cn('subtitle')}>{submenu[3].title}</h2>
                     {formerGroupMembers.map(({ name }, i) => (
                       <p className={cn('former-group-name')} key={i + name}>· {name}</p>
                     ))}
