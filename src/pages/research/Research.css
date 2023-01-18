@@ -1,20 +1,12 @@
 .research {
-    @media (--mobileB) {
+    @media (--mobile) {
+        padding-bottom: 60px;
         padding-top: 20px;
     }
 
     @media (--desktop) {
+        padding-bottom: 80px;
         padding-top: 50px;
-    }
-
-    &__inner {
-        @media (--mobileB) {
-            padding-bottom: 60px;
-        }
-
-        @media (--desktop) {
-            padding-bottom: 80px;
-        }
     }
 
     &__title {

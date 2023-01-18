@@ -11,8 +11,10 @@ const cn = cnCreate('footer');
 const Footer: React.FC = () => {
   const { isMobile } = useAppContext();
 
+  const currentYear = new Date().getFullYear();
+
   const renderCopyright = () => (
-    <p className={cn('copyright')}>© 2017-2021</p>
+    <p className={cn('copyright')}>{`© 2017-${currentYear}`}</p>
   );
 
   return (

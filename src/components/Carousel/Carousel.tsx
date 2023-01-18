@@ -34,7 +34,7 @@ export interface ICarouselProps {
     slidesSettings?: SlidesSettingsType;
     loop?: boolean;
     theme?: ThemeType;
-    pagination?: PaginationOptions | boolean,
+    pagination?: PaginationOptions,
     initialSlide?: number;
     centeredSlides?: boolean;
     onNextClick?: (index: number) => void;
@@ -61,7 +61,7 @@ const cn = cnCreate('carousel');
 const Carousel: React.FC<ICarouselProps> = ({
     className,
     slidesSettings = defaultSlidesSettings,
-    pagination = true,
+    pagination,
     theme = 'carousel',
     loop = false,
     initialSlide = 1,
@@ -160,7 +160,7 @@ const Carousel: React.FC<ICarouselProps> = ({
                 breakpoints={slidesSettings}
                 watchSlidesVisibility
                 loop={false}
-                pagination={pagination}
+                pagination={{ clickable: true, ...pagination }}
                 initialSlide={initialSlide - 1}
                 centeredSlides={centeredSlides}
                 onSwiper={handleSwiper}
