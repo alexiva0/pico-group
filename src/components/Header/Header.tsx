@@ -6,10 +6,10 @@ import SideMenu from 'components/SideMenu/SideMenu';
 import ContentArea from 'components/ContentArea/ContentArea';
 import Collapse from 'components/Collapse/Collapse';
 import { menu } from 'content/menu';
-import './AppHeader.css';
+import './Header.css';
 
 const cn = cnCreate('header');
-const AppHeader: React.FC = () => {
+const Header: React.FC = () => {
   const { isMobileWide } = useAppContext();
 
   const [isMenuOpened, setMenuOpened] = useState(false);
@@ -102,7 +102,7 @@ const AppHeader: React.FC = () => {
     <header className={cn()}>
       <ContentArea>
         <div className={cn('inner')}>
-          <NavLink to="/" className={cn('logo')}>PICO</NavLink>
+          <NavLink to="/" className={cn('logo')} onClick={handleMobileMenuClick}>PICO</NavLink>
           {isMobileWide ? renderMobileMenuIcon() : renderItemsList()}
         </div>
       </ContentArea>
@@ -121,4 +121,4 @@ const AppHeader: React.FC = () => {
   );
 };
 
-export default AppHeader;
+export default Header;
