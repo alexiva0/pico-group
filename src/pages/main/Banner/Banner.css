@@ -6,11 +6,11 @@
   position: relative;
 
   @media (--mobile) {
-    height: calc(100vh - 50px - env(safe-area-inset-bottom));
+    height: calc(100vh - 50px - env(safe-area-inset-bottom, 100px));
   }
 
   @media (--desktop) {
-    height: calc(100vh - 70px - env(safe-area-inset-bottom));
+    height: calc(100vh - 70px - env(safe-area-inset-bottom, 100px));
   }
 
   &:before {
