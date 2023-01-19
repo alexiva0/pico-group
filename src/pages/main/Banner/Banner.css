@@ -5,13 +5,13 @@
   overflow: hidden;
   position: relative;
 
-  @media (--mobile) {
+  /* @media (--mobile) {
     height: calc(100vh - 50px - env(safe-area-inset-bottom, 100px));
   }
 
   @media (--desktop) {
     height: calc(100vh - 70px - env(safe-area-inset-bottom, 100px));
-  }
+  } */
 
   &:before {
     background: linear-gradient(180deg, rgba(25, 28, 30, 0) 0%, rgba(25, 28, 30, 0.3) 61.77%, rgba(25, 28, 30, 0.7) 73.24%, rgba(25, 28, 30, 0.9) 100%);
