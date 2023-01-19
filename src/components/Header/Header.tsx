@@ -29,6 +29,10 @@ const Header: React.FC = () => {
     setMenuOpened(!isMenuOpened);
   };
 
+  const handleLogoClick = () => {
+    setMenuOpened(false);
+  };
+
   const handleMobileItemClick = (index: number) => () => {
     submenuIndex === index ? setSubmenuIndex(-1) : setSubmenuIndex(index);
   };
@@ -102,7 +106,7 @@ const Header: React.FC = () => {
     <header className={cn()}>
       <ContentArea>
         <div className={cn('inner')}>
-          <NavLink to="/" className={cn('logo')} onClick={handleMobileMenuClick}>PICO</NavLink>
+          <NavLink to="/" className={cn('logo')} onClick={handleLogoClick}>PICO</NavLink>
           {isMobileWide ? renderMobileMenuIcon() : renderItemsList()}
         </div>
       </ContentArea>
