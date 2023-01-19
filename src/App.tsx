@@ -4,7 +4,7 @@ import cnCreate from 'utils/cnCreate';
 import AppContext from 'context/AppContext/AppContext';
 import throttle from 'lodash.throttle';
 import Main from 'pages/main/Main';
-import AppHeader from 'components/AppHeader/AppHeader';
+import Header from 'components/Header/Header';
 import Footer from 'components/Footer/Footer';
 import People from 'pages/people/People';
 import Research from 'pages/research/Research';
@@ -45,7 +45,7 @@ const App: React.FC = () => {
     <AppContext>
       <Router>
         <div className={cn()}>
-          <AppHeader />
+          <Header />
           <Switch>
             <Route path={menu[4].url}>
               <NewsPress />

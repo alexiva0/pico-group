@@ -10,9 +10,16 @@ $(b) {
     display: flex;
     align-items: center;
     text-decoration: none;
-    position: absolute;
-    right: 0;
-    top: -45px;
+
+    @media (--mobileSM) {
+      margin-top: 10px;
+    }
+
+    @media (--mobileBU) {
+      position: absolute;
+      right: 0;
+      top: -45px;
+    }
   }
 
   &__back:hover  {
@@ -33,6 +40,12 @@ $(b) {
     transform: translateX(5px);
     transition: all 0.7s cubic-bezier(0.19, 1, 0.22, 1) 0.1s;
     width: 24px;
+  }
+
+  &__container {
+    @media (--mobileSM) {
+      padding-top: 20px;
+    }
   }
 
   &__title {
