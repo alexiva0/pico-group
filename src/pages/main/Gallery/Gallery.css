@@ -27,14 +27,14 @@
   }
 
   &__image {
+    width: auto !important;
+
     @media (--mobileSM) {
       height: 185px;
-      width: auto !important;
     }
 
     @media (--mobileM) {
       height: 270px;
-      width: auto !important;
     }
 
     @media (--mobileB) {
