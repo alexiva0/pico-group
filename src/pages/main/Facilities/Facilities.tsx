@@ -4,8 +4,8 @@ import Grid from 'components/Grid/Grid';
 import GridColumn from 'components/Grid/GridColumn';
 import ContentArea from 'components/ContentArea/ContentArea';
 import ImageBox from 'components/ImageBox/ImageBox';
-import Image1 from "./i/Photo_666.jpg";
-import Image2 from "./i/Pico-ryhma_69s.jpeg";
+import Image1 from "./i/Pico-ryhma_69s.jpg";
+import Image2 from "./i/Photo_666.jpg";
 import './Facilities.css';
 
 const cn = cnCreate('facilities');
@@ -32,7 +32,7 @@ const Facilities: React.FC = () => (
         </div>
         <Grid vAlign="center">
           <GridColumn all="6" mobile="12" tablet="12" className={cn('column', { order: '2' })}>
-            <ImageBox image={Image2} footnoteText="Two of our dilution refrigerators in the fourth floor lab." />
+            <ImageBox image={Image2} imgAlt="Two of our dilution refrigerators in the fourth floor lab." />
           </GridColumn>
           <GridColumn all="6" mobile="12" tablet="12" className={cn('column', { order: '1', 'no-padding': true })}>
             <h3 className={cn('subtitle')}>

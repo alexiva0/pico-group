@@ -21,7 +21,8 @@ const Banner: React.FC = () => {
   };
 
   return (
-    <div className={cn()} style={{ backgroundImage: `url('${Picture}')`, height: `${pageHeight}px` }}>
+    <div className={cn()} style={{ height: `${pageHeight}px` }}>
+      <div className={cn('image')} style={{ backgroundImage: `url('${Picture}')` }} />
       <ContentArea className={cn('inner')}>
         <div className={cn('content')}>
           <h1 className={cn('title')}>Quantum phenomena and{'\u00A0'}devices</h1>

@@ -5,7 +5,6 @@ import About from 'pages/main/About/About';
 import Partners from 'pages/main/Infrastructure/Infrastructure';
 import Facilities from 'pages/main/Facilities/Facilities';
 import LatestNews from 'pages/main/LatestNews/LatestNews';
-import Gallery from 'pages/main/Gallery/Gallery';
 import './Main.css';
 
 const cn = cnCreate('main');
@@ -17,7 +16,6 @@ const Main: React.FC = () => {
       <Partners />
       <Facilities />
       <LatestNews />
-      <Gallery />
     </div>
   );
 };
