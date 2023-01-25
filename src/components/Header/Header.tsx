@@ -74,8 +74,6 @@ const Header: React.FC = () => {
     </div>
   );
 
-  console.log(isMenuOpened);
-
   const renderSubItemsList = () => (
     <div className={cn('list')}>
       {menu.map(({ title, url, submenu }, index) => {
