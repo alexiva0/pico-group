@@ -42,12 +42,6 @@ $(b) {
     width: 24px;
   }
 
-  &__container {
-    @media (--mobileSM) {
-      padding-top: 20px;
-    }
-  }
-
   &__title {
     margin-bottom: 20px;
   }
