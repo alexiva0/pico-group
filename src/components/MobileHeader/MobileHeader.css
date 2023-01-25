@@ -1,0 +1,26 @@
+.mobile-header {
+  @media (--mobile) {
+    border-bottom: 1px solid var(--paleLight);
+    margin-bottom: 20px;
+  }
+
+  @media (--desktop) {
+    margin-bottom: 10px;
+  }
+
+  h1&__title {
+    @mixin h1-custom;
+    margin-bottom: 10px;
+
+    @media (--mobile) {
+        color: var(--paleLight);
+    }
+  }
+
+  &__menu-list {
+    @media (--mobile) {
+      border-top: 1px solid var(--paleLight);
+      padding: 10px 0;
+    }
+  }
+}

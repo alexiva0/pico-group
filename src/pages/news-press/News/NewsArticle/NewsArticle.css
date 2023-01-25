@@ -11,11 +11,11 @@ $(b) {
     align-items: center;
     text-decoration: none;
 
-    @media (--mobileSM) {
-      margin-top: 10px;
+    @media (--mobile) {
+      margin-bottom: 10px;
     }
 
-    @media (--mobileBU) {
+    @media (--desktop) {
       position: absolute;
       right: 0;
       top: -45px;

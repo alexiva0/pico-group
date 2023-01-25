@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { NavLink } from 'react-router-dom';
+import { NavLink, matchPath, useLocation } from 'react-router-dom';
 import cnCreate from 'utils/cnCreate';
 import useAppContext from 'hooks/useAppContext';
 import SideMenu from 'components/SideMenu/SideMenu';
@@ -11,6 +11,7 @@ import './Header.css';
 const cn = cnCreate('header');
 const Header: React.FC = () => {
   const { isMobileWide } = useAppContext();
+  const location = useLocation();
 
   const [isMenuOpened, setMenuOpened] = useState(false);
   const [submenuIndex, setSubmenuIndex] = useState<number>(-1);
@@ -26,7 +27,13 @@ const Header: React.FC = () => {
   };
 
   const handleMobileMenuClick = () => {
-    setMenuOpened(!isMenuOpened);
+    const newIsOpen = !isMenuOpened;
+
+    if (!newIsOpen) {
+      setSubmenuIndex(-1);
+    }
+
+    setMenuOpened(newIsOpen);
   };
 
   const handleLogoClick = () => {
@@ -67,11 +74,17 @@ const Header: React.FC = () => {
     </div>
   );
 
+  console.log(isMenuOpened);
+
   const renderSubItemsList = () => (
     <div className={cn('list')}>
       {menu.map(({ title, url, submenu }, index) => {
         const isArrayEmpty = !!submenu.length;
-        const isCollapseOpened = submenuIndex === index;
+        const isSelected = submenuIndex === index;
+        const submenuUrls = submenu.map(({ url: submenuPath }) => `${url}${submenuPath}`);
+        const isSubmenuItemActive = Boolean(matchPath(location.pathname, submenuUrls));
+        const shouldExpandActiveSubmenu = submenuIndex === -1;
+        const isCollapseOpened = isSelected || (shouldExpandActiveSubmenu && isSubmenuItemActive);
 
         return (
           isArrayEmpty ? (

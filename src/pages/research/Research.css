@@ -9,27 +9,6 @@
         padding-top: 50px;
     }
 
-    h1&__title {
-        @mixin h1-custom;
-        margin-bottom: 10px;
-
-        @media (--mobile) {
-            color: var(--paleLight);
-            margin-bottom: 20px;
-            position: relative;
-            width: 100%;
-
-            &:after {
-                background-color: var(--paleLight);
-                content: '';
-                display: block;
-                height: 1px;
-                margin-top: 5px;
-                width: 100%;
-            }
-        }
-    }
-
     &__subtitle {
         margin-bottom: 30px;
     }

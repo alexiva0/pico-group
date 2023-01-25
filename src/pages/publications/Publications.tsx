@@ -9,6 +9,7 @@ import ChipsPanel from 'components/ChipsPanel/ChipsPanel';
 import SideMenu from 'components/SideMenu/SideMenu';
 import Publication from './Publication/Publication';
 import PhdThesis from './PhdThesis/PhdThesis';
+import MobileHeader from 'components/MobileHeader/MobileHeader';
 import {
   publicationsData,
   phdThesis,
@@ -22,7 +23,7 @@ const cn = cnCreate('publications');
 const Publications: React.FC = () => {
   const { isMobileWide } = useAppContext();
   const { path } = useRouteMatch();
-  const { submenu } = menu[3];
+  const { title, submenu } = menu[3];
 
   const renderPublications = (year: number, publications: IPublicationsList[], i: number) => (
     <div key={i + year} className={cn('year')}>
@@ -67,7 +68,11 @@ const Publications: React.FC = () => {
       <ContentArea>
         <Grid>
           <GridColumn leftOffsetDesktop="3">
-            <h1 className={cn('title')}>Publications</h1>
+            <MobileHeader
+              menu={submenu}
+              path={path}
+              title={title}
+            />
           </GridColumn>
         </Grid>
         <Grid>
