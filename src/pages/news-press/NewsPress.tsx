@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Switch, Route, Redirect, useRouteMatch } from 'react-router-dom';
 import cnCreate from 'utils/cnCreate';
@@ -7,6 +6,7 @@ import Grid from 'components/Grid/Grid';
 import GridColumn from 'components/Grid/GridColumn';
 import ContentArea from 'components/ContentArea/ContentArea';
 import SideMenu from 'components/SideMenu/SideMenu';
+import MobileHeader from 'components/MobileHeader/MobileHeader';
 import Article from './News/NewsArticle/NewsArticle';
 import Press from './Press/Press';
 import News from './News/News';
@@ -17,14 +17,18 @@ const cn = cnCreate('news-press');
 const NewsPress: React.FC = () => {
   const { isMobileWide } = useAppContext();
   const { path } = useRouteMatch();
-  const { submenu } = menu[4];
+  const { title, submenu } = menu[4];
 
   return (
     <div className={cn()}>
       <ContentArea>
         <Grid>
           <GridColumn leftOffsetDesktop="3">
-            <h1 className={cn('title')}>News & PR</h1>
+            <MobileHeader
+              menu={submenu}
+              path={path}
+              title={title}
+            />
           </GridColumn>
         </Grid>
         <Grid>

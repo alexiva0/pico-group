@@ -6,6 +6,7 @@ import SideMenu from 'components/SideMenu/SideMenu';
 import Grid from 'components/Grid/Grid';
 import GridColumn from 'components/Grid/GridColumn';
 import ContentArea from 'components/ContentArea/ContentArea';
+import MobileHeader from 'components/MobileHeader/MobileHeader';
 import Person from 'pages/people/Person/Person';
 import {
   seniorResearchers,
@@ -20,7 +21,7 @@ const cn = cnCreate('people');
 const People: React.FC = () => {
   const { isMobileWide } = useAppContext();
   const { path } = useRouteMatch();
-  const { submenu } = menu[1];
+  const { title, submenu } = menu[1];
 
   const { people: seniors } = seniorResearchers;
   const { people: postdoctoral } = postdoctoralResearchers;
@@ -42,7 +43,11 @@ const People: React.FC = () => {
       <ContentArea>
         <Grid>
           <GridColumn leftOffsetDesktop="3">
-            <h1 className={cn('title')}>Team</h1>
+            <MobileHeader
+              menu={submenu}
+              path={path}
+              title={title}
+            />
           </GridColumn>
         </Grid>
         <Grid>

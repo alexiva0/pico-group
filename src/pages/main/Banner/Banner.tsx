@@ -8,9 +8,9 @@ import './Banner.css';
 
 const cn = cnCreate('banner');
 const Banner: React.FC = () => {
-  const { isMobile } = useAppContext();
+  const { isMobileWide } = useAppContext();
 
-  const headerHeight = isMobile ? 50 : 70;
+  const headerHeight = isMobileWide ? 50 : 70;
   const pageHeight = window.innerHeight - headerHeight;
 
   const handleArrowClick = () => {
