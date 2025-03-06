@@ -94,11 +94,11 @@ $(b) {
     }
 
     $(swiperBulletActive) {
-        background-color: var(--dark50);
+        background-color: var(--dark70);
         cursor: default;
 
         &:hover {
-            background-color: var(--dark50);
+            background-color: var(--dark70);
         }
     }
 

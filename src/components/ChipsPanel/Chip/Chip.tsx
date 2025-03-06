@@ -2,8 +2,14 @@ import React from 'react';
 import cnCreate from 'utils/cnCreate';
 import './Chip.css';
 
+interface IContent {
+    title: number | string;
+    content: JSX.Element | JSX.Element[];
+}
+
 export interface IChipProps {
     className?: string | string[];
+    data?: IContent[];
     isChosen: boolean;
     onClick: () => void;
 }

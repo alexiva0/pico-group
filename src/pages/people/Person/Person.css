@@ -41,7 +41,7 @@
 
     &__image-box {
         @media (--mobile) {
-            margin-right: 15px;
+            margin-right: 25px;
             min-width: 290px;
             width: 290px;
         }
@@ -74,6 +74,10 @@
     &__name-box {
         flex-grow: 1;
         padding-bottom: 15px;
+
+        @media (--mobileBU) {
+            padding-right: 30px;
+        }
     }
 
     &__name {
@@ -86,7 +90,6 @@
 
     &__info {
         @media (--mobile) {
-            margin-top: 15px;
             width: 100%;
         }
 

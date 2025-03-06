@@ -29,7 +29,12 @@ const MobileHeader: React.FC<IMobileHeaderProps> = ({ menu, path, title }) => {
 
   return (
     <div className={cn()}>
-      <h1 className={cn('title')} onClick={handleMobileMenuClick}>{title}</h1>
+      <div className={cn('title-container')}>
+        <svg width="30" height="30" viewBox="0 0 30 30" fill="none" className={cn('icon', { rorated: isCollapseOpened })}>
+            <path d="M4 11L15 22L26 11" stroke="#E7E7E7" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+        </svg>
+        <h1 className={cn('title')} onClick={handleMobileMenuClick}>{title}</h1>
+      </div>
       {isMobileWide && (
         <Collapse isOpened={isCollapseOpened}>
           <div className={cn('menu-list')}>

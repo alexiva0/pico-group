@@ -1,4 +1,6 @@
 .layout-default {
+    overflow: hidden;
+
     @media (--mobile) {
         padding-top: 50px;
     }
@@ -8,8 +10,6 @@
     }
 
     &__scroll-top {
-        background-color: transparent;
-        border-radius: 50%;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -18,23 +18,26 @@
         position: fixed;
         bottom: 50px;
         right: 25px;
-        transition: all 0.7s cubic-bezier(0.19, 1, 0.22, 1) 0.1s;
         width: 50px;
         z-index: 100;
 
+        svg path {
+            stroke: var(--light);
+            transition: all 0.7s cubic-bezier(0.19, 1, 0.22, 1) 0.1s;
+        }
+
         &:hover {
-            background-color: var(--dark50);
             cursor: pointer;
+
+            svg path {
+                stroke: var(--blue);
+            }
         }
 
         @media (--mobileSM) {
             right: 15px;
         }
     }
-
-    &__scroll-top:hover {
-        background-color: var(--dark70);
-      }
 
     &__scroll-top_apear {
         opacity: 1;

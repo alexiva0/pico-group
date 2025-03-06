@@ -8,9 +8,30 @@
     margin-bottom: 10px;
   }
 
+  &__title-container {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 10px;
+  }
+
+  &__icon {
+    height: 16px;
+    width: 16px;
+    transform: rotate(0deg);
+    transition: transform 0.7s cubic-bezier(0.19, 1, 0.22, 1) 0.1s;
+
+    svg path {
+      stroke: var(--paleLight);
+    }
+  }
+
+  &__icon_rorated {
+    transform: rotate(180deg);
+  }
+
   h1&__title {
     @mixin h1-custom;
-    margin-bottom: 10px;
 
     @media (--mobile) {
         color: var(--paleLight);

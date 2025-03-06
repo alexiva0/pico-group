@@ -1,7 +1,7 @@
 import React from 'react';
 import cnCreate from 'utils/cnCreate';
 import useAppContext from 'hooks/useAppContext';
-import Picture from './i/Banner.jpg';
+import Animation from './i/banner.mp4';
 import ContentArea from 'components/ContentArea/ContentArea';
 import Button from 'components/Button/Button';
 import './Banner.css';
@@ -22,7 +22,10 @@ const Banner: React.FC = () => {
 
   return (
     <div className={cn()} style={{ height: `${pageHeight}px` }}>
-      <div className={cn('image')} style={{ backgroundImage: `url('${Picture}')` }} />
+      <video className={cn('media')} autoPlay loop muted>
+        <source src={Animation} type="video/mp4" />
+      </video>
+      {/* <div className={cn('image')} style={{ backgroundImage: `url('${Picture}')` }} /> */}
       <ContentArea className={cn('inner')}>
         <div className={cn('content')}>
           <h1 className={cn('title')}>Quantum phenomena and{'\u00A0'}devices</h1>
