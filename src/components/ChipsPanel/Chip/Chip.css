@@ -29,7 +29,8 @@
     }
 
     &_chosen {
-        background-color: var(--dark60);
+        background-color: var(--light);
         border: 1px solid var(--light);
+        color: var(--dark80);
     }
 }

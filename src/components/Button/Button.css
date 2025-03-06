@@ -3,6 +3,7 @@
     appearance: none;
     background-color: transparent;
     border: 2px solid var(--light);
+    border-radius: 4px;
     box-sizing: border-box;
     color: var(--light);
     cursor: pointer;
@@ -53,10 +54,10 @@
     }
 
     &:active {
-        border-color:  var(--dark40);
+        border-color:  var(--dark20);
 
         &:before {
-            background-color: var(--dark40);
+            background-color: var(--dark20);
         }
     }
 

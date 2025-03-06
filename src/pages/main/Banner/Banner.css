@@ -1,14 +1,39 @@
 .banner {
-  border-bottom: 1px solid var(--dark60);
   position: relative;
 
-  &__image {
-    background-size: cover;
-    background-position: top center;
+  &:before {
+    content: '';
+    background: var(--dark80);
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    opacity: 80%;
     height: 100%;
+    width: 100%;
+    z-index: 2;
+  }
+
+  &:after {
+    content: '';
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(17, 19, 28, 1) 100%);
     position: absolute;
     left: 0;
+    bottom: 0;
+    right: 0;
+    opacity: 80%;
+    height: 50%;
     width: 100%;
+    z-index: 2;
+  }
+
+  &__media {
+    height: 100%;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: auto;
 
     @media (--mobile) {
       top: -50px;
@@ -65,8 +90,6 @@
 
   &__arrow-down {
     animation: arrowMoving 1s linear infinite;
-    background-color: transparent;
-    border-radius: 50%;
     cursor: pointer;
     display: flex;
     align-items: center;
@@ -74,9 +97,14 @@
     height: 50px;
     position: absolute;
     left: calc(50% - 25px);
-    transition: all 0.7s cubic-bezier(0.19, 1, 0.22, 1) 0.1s;
+
     width: 50px;
     z-index: 10;
+
+    svg path {
+      stroke: var(--light);
+      transition: all 0.7s cubic-bezier(0.19, 1, 0.22, 1) 0.1s;
+    }
 
     @media (--mobile) {
       bottom: 20px;
@@ -88,7 +116,9 @@
   }
 
   &__arrow-down:hover {
-    background-color: var(--dark70);
+    svg path {
+      stroke: var(--blue);
+    }
   }
 }
 
